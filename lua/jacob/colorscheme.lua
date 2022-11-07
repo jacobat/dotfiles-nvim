@@ -1,0 +1,12 @@
+-- vim.g.everforest_transparent_background = 1
+require("catppuccin").setup({
+  transparent_background = true
+})
+
+-- set colorscheme to nightfly with protected call
+-- in case it isn't installed
+local status, _ = pcall(vim.cmd, "colorscheme catppuccin-mocha")
+if not status then
+  print("Colorscheme not found!") -- print error if colorscheme not installed
+  return
+end
