@@ -130,6 +130,11 @@ _G.packer_plugins = {
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-treesitter-endwise"] = {
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/nvim-treesitter-endwise",
+    url = "https://github.com/RRethy/nvim-treesitter-endwise"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -159,11 +164,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/vim-angry",
     url = "https://github.com/b4winckler/vim-angry"
-  },
-  ["vim-endwise"] = {
-    loaded = true,
-    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/vim-endwise",
-    url = "https://github.com/tpope/vim-endwise"
   },
   ["vim-fugitive"] = {
     loaded = true,

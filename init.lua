@@ -7,7 +7,7 @@ require("jacob.lualine")
 require("jacob.comment")
 require("jacob.cmp")
 require("jacob.neotest")
--- require("jacob.treesitter")
+require("jacob.treesitter")
 -- require("jacob.elixir")
 
 vim.diagnostic.handlers["my/notify"] = {
