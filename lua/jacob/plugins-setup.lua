@@ -100,8 +100,31 @@ return packer.startup(function(use)
   use("hrsh7th/nvim-cmp") -- completion plugin
   use("hrsh7th/cmp-buffer") -- source for text in buffer
   use("hrsh7th/cmp-path") -- source for file system paths
-  -- use('tpope/vim-endwise') -- end completion
   use('RRethy/nvim-treesitter-endwise')
+
+  use {
+  'AckslD/nvim-trevJ.lua',
+    config = function() require('trevj').setup({
+      containers = {
+        lua = {
+          table_constructor = {final_separator = ',', final_end_line = true},
+          arguments = {final_separator = false, final_end_line = true},
+          parameters = {final_separator = false, final_end_line = true},
+        },
+        ruby = {
+          hash = {final_separator = false, final_end_line = true},
+          array = {final_separator = false, final_end_line = true},
+          arguments = {final_separator = false, final_end_line = true},
+          method_parameters = {final_separator = false, final_end_line = true},
+        }
+      }
+    }) end,
+    setup = function()
+      vim.keymap.set("n", "<leader>k", function()
+        require("trevj").format_at_cursor()
+      end)
+    end,
+  }
 
   -- Elixir
   -- use({ "mhanberg/elixir.nvim", requires = {

@@ -135,6 +135,13 @@ _G.packer_plugins = {
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/nvim-treesitter-endwise",
     url = "https://github.com/RRethy/nvim-treesitter-endwise"
   },
+  ["nvim-trevJ.lua"] = {
+    config = { "\27LJ\2\nË\3\0\0\6\0\23\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\21\0005\3\n\0005\4\4\0005\5\3\0=\5\5\0045\5\6\0=\5\a\0045\5\b\0=\5\t\4=\4\v\0035\4\r\0005\5\f\0=\5\14\0045\5\15\0=\5\16\0045\5\17\0=\5\a\0045\5\18\0=\5\19\4=\4\20\3=\3\22\2B\0\2\1K\0\1\0\15containers\1\0\0\truby\22method_parameters\1\0\2\20final_separator\1\19final_end_line\2\1\0\2\20final_separator\1\19final_end_line\2\narray\1\0\2\20final_separator\1\19final_end_line\2\thash\1\0\0\1\0\2\20final_separator\1\19final_end_line\2\blua\1\0\0\15parameters\1\0\2\20final_separator\1\19final_end_line\2\14arguments\1\0\2\20final_separator\1\19final_end_line\2\22table_constructor\1\0\0\1\0\2\20final_separator\6,\19final_end_line\2\nsetup\ntrevj\frequire\0" },
+    loaded = true,
+    needs_bufread = false,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/opt/nvim-trevJ.lua",
+    url = "https://github.com/AckslD/nvim-trevJ.lua"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -188,6 +195,17 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Setup for: nvim-trevJ.lua
+time([[Setup for nvim-trevJ.lua]], true)
+try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\21format_at_cursor\ntrevj\frequireC\1\0\5\0\6\0\b6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0003\4\5\0B\0\4\1K\0\1\0\0\14<leader>k\6n\bset\vkeymap\bvim\0", "setup", "nvim-trevJ.lua")
+time([[Setup for nvim-trevJ.lua]], false)
+time([[packadd for nvim-trevJ.lua]], true)
+vim.cmd [[packadd nvim-trevJ.lua]]
+time([[packadd for nvim-trevJ.lua]], false)
+-- Config for: nvim-trevJ.lua
+time([[Config for nvim-trevJ.lua]], true)
+try_loadstring("\27LJ\2\nË\3\0\0\6\0\23\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\21\0005\3\n\0005\4\4\0005\5\3\0=\5\5\0045\5\6\0=\5\a\0045\5\b\0=\5\t\4=\4\v\0035\4\r\0005\5\f\0=\5\14\0045\5\15\0=\5\16\0045\5\17\0=\5\a\0045\5\18\0=\5\19\4=\4\20\3=\3\22\2B\0\2\1K\0\1\0\15containers\1\0\0\truby\22method_parameters\1\0\2\20final_separator\1\19final_end_line\2\1\0\2\20final_separator\1\19final_end_line\2\narray\1\0\2\20final_separator\1\19final_end_line\2\thash\1\0\0\1\0\2\20final_separator\1\19final_end_line\2\blua\1\0\0\15parameters\1\0\2\20final_separator\1\19final_end_line\2\14arguments\1\0\2\20final_separator\1\19final_end_line\2\22table_constructor\1\0\0\1\0\2\20final_separator\6,\19final_end_line\2\nsetup\ntrevj\frequire\0", "config", "nvim-trevJ.lua")
+time([[Config for nvim-trevJ.lua]], false)
 -- Config for: neotest
 time([[Config for neotest]], true)
 try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0046\0\0\0009\0\1\0005\2\2\0D\0\2\0\1\4\0\0\vbundle\texec\nrspec\16tbl_flatten\bvimè\1\1\0\b\0\t\1\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\a\0004\3\3\0006\4\0\0'\6\3\0B\4\2\0025\6\5\0003\a\4\0=\a\6\6B\4\2\0?\4\0\0=\3\b\2B\0\2\1K\0\1\0\radapters\1\0\0\14rspec_cmd\1\0\0\0\18neotest-rspec\nsetup\fneotest\frequire\3ÄÄ¿ô\4\0", "config", "neotest")
