@@ -33,7 +33,7 @@ return packer.startup(function(use)
 
   use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-  use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+  use("bluz71/vim-nightfly-guicolors") -- nightfly colorscheme
   use("sainnhe/everforest") -- everforst color scheme
   use({ "catppuccin/nvim", as = "catppuccin" }) -- catppuccin colorscheme
 
@@ -44,7 +44,7 @@ return packer.startup(function(use)
   use("szw/vim-maximizer") -- maximizes and restores current window
 
   -- essential plugins
-  -- use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
+  use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
   -- use("vim-scripts/ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
   -- commenting with gc
@@ -65,6 +65,15 @@ return packer.startup(function(use)
 
   -- buffers
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'kyazdani42/nvim-web-devicons'}
+
+  -- Ruby
+  use({
+    "tpope/vim-rails",
+    "tpope/vim-projectionist",
+    "tpope/vim-rake",
+    "tpope/vim-bundler",
+    ft = { "ruby", "eruby" },
+  })
 
   -- test & rspec
   use({

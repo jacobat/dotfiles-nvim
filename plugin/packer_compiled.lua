@@ -136,7 +136,7 @@ _G.packer_plugins = {
     url = "https://github.com/RRethy/nvim-treesitter-endwise"
   },
   ["nvim-trevJ.lua"] = {
-    config = { "\27LJ\2\nË\3\0\0\6\0\23\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\21\0005\3\n\0005\4\4\0005\5\3\0=\5\5\0045\5\6\0=\5\a\0045\5\b\0=\5\t\4=\4\v\0035\4\r\0005\5\f\0=\5\14\0045\5\15\0=\5\16\0045\5\17\0=\5\a\0045\5\18\0=\5\19\4=\4\20\3=\3\22\2B\0\2\1K\0\1\0\15containers\1\0\0\truby\22method_parameters\1\0\2\20final_separator\1\19final_end_line\2\1\0\2\20final_separator\1\19final_end_line\2\narray\1\0\2\20final_separator\1\19final_end_line\2\thash\1\0\0\1\0\2\20final_separator\1\19final_end_line\2\blua\1\0\0\15parameters\1\0\2\20final_separator\1\19final_end_line\2\14arguments\1\0\2\20final_separator\1\19final_end_line\2\22table_constructor\1\0\0\1\0\2\20final_separator\6,\19final_end_line\2\nsetup\ntrevj\frequire\0" },
+    config = { "\27LJ\2\nË\3\0\0\6\0\23\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\21\0005\3\n\0005\4\4\0005\5\3\0=\5\5\0045\5\6\0=\5\a\0045\5\b\0=\5\t\4=\4\v\0035\4\r\0005\5\f\0=\5\14\0045\5\15\0=\5\16\0045\5\17\0=\5\a\0045\5\18\0=\5\19\4=\4\20\3=\3\22\2B\0\2\1K\0\1\0\15containers\1\0\0\truby\22method_parameters\1\0\2\19final_end_line\2\20final_separator\1\1\0\2\19final_end_line\2\20final_separator\1\narray\1\0\2\19final_end_line\2\20final_separator\1\thash\1\0\0\1\0\2\19final_end_line\2\20final_separator\1\blua\1\0\0\15parameters\1\0\2\19final_end_line\2\20final_separator\1\14arguments\1\0\2\19final_end_line\2\20final_separator\1\22table_constructor\1\0\0\1\0\2\19final_end_line\2\20final_separator\6,\nsetup\ntrevj\frequire\0" },
     loaded = true,
     needs_bufread = false,
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/opt/nvim-trevJ.lua",
@@ -172,6 +172,11 @@ _G.packer_plugins = {
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/vim-angry",
     url = "https://github.com/b4winckler/vim-angry"
   },
+  ["vim-bundler"] = {
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/vim-bundler",
+    url = "https://github.com/tpope/vim-bundler"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -187,10 +192,30 @@ _G.packer_plugins = {
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/vim-nightfly-guicolors",
     url = "https://github.com/bluz71/vim-nightfly-guicolors"
   },
+  ["vim-projectionist"] = {
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/vim-projectionist",
+    url = "https://github.com/tpope/vim-projectionist"
+  },
+  ["vim-rails"] = {
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/vim-rails",
+    url = "https://github.com/tpope/vim-rails"
+  },
+  ["vim-rake"] = {
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/vim-rake",
+    url = "https://github.com/tpope/vim-rake"
+  },
   ["vim-rhubarb"] = {
     loaded = true,
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
     url = "https://github.com/tpope/vim-rhubarb"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   }
 }
 
@@ -202,14 +227,14 @@ time([[Setup for nvim-trevJ.lua]], false)
 time([[packadd for nvim-trevJ.lua]], true)
 vim.cmd [[packadd nvim-trevJ.lua]]
 time([[packadd for nvim-trevJ.lua]], false)
--- Config for: nvim-trevJ.lua
-time([[Config for nvim-trevJ.lua]], true)
-try_loadstring("\27LJ\2\nË\3\0\0\6\0\23\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\21\0005\3\n\0005\4\4\0005\5\3\0=\5\5\0045\5\6\0=\5\a\0045\5\b\0=\5\t\4=\4\v\0035\4\r\0005\5\f\0=\5\14\0045\5\15\0=\5\16\0045\5\17\0=\5\a\0045\5\18\0=\5\19\4=\4\20\3=\3\22\2B\0\2\1K\0\1\0\15containers\1\0\0\truby\22method_parameters\1\0\2\20final_separator\1\19final_end_line\2\1\0\2\20final_separator\1\19final_end_line\2\narray\1\0\2\20final_separator\1\19final_end_line\2\thash\1\0\0\1\0\2\20final_separator\1\19final_end_line\2\blua\1\0\0\15parameters\1\0\2\20final_separator\1\19final_end_line\2\14arguments\1\0\2\20final_separator\1\19final_end_line\2\22table_constructor\1\0\0\1\0\2\20final_separator\6,\19final_end_line\2\nsetup\ntrevj\frequire\0", "config", "nvim-trevJ.lua")
-time([[Config for nvim-trevJ.lua]], false)
 -- Config for: neotest
 time([[Config for neotest]], true)
 try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0046\0\0\0009\0\1\0005\2\2\0D\0\2\0\1\4\0\0\vbundle\texec\nrspec\16tbl_flatten\bvimè\1\1\0\b\0\t\1\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\a\0004\3\3\0006\4\0\0'\6\3\0B\4\2\0025\6\5\0003\a\4\0=\a\6\6B\4\2\0?\4\0\0=\3\b\2B\0\2\1K\0\1\0\radapters\1\0\0\14rspec_cmd\1\0\0\0\18neotest-rspec\nsetup\fneotest\frequire\3ÄÄ¿ô\4\0", "config", "neotest")
 time([[Config for neotest]], false)
+-- Config for: nvim-trevJ.lua
+time([[Config for nvim-trevJ.lua]], true)
+try_loadstring("\27LJ\2\nË\3\0\0\6\0\23\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\21\0005\3\n\0005\4\4\0005\5\3\0=\5\5\0045\5\6\0=\5\a\0045\5\b\0=\5\t\4=\4\v\0035\4\r\0005\5\f\0=\5\14\0045\5\15\0=\5\16\0045\5\17\0=\5\a\0045\5\18\0=\5\19\4=\4\20\3=\3\22\2B\0\2\1K\0\1\0\15containers\1\0\0\truby\22method_parameters\1\0\2\19final_end_line\2\20final_separator\1\1\0\2\19final_end_line\2\20final_separator\1\narray\1\0\2\19final_end_line\2\20final_separator\1\thash\1\0\0\1\0\2\19final_end_line\2\20final_separator\1\blua\1\0\0\15parameters\1\0\2\19final_end_line\2\20final_separator\1\14arguments\1\0\2\19final_end_line\2\20final_separator\1\22table_constructor\1\0\0\1\0\2\19final_end_line\2\20final_separator\6,\nsetup\ntrevj\frequire\0", "config", "nvim-trevJ.lua")
+time([[Config for nvim-trevJ.lua]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
