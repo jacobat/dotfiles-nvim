@@ -41,12 +41,18 @@ keymap.set("n", "<leader>gv", ":edit $MYVIMRC<CR>")
 -- tests
 keymap.set("n", "<leader>rs", function() require('neotest').run.run(vim.fn.expand('%')) end, {})
 keymap.set("n", "<leader>ra", function() require('neotest').run.run(vim.fn.getcwd()) end, {})
+keymap.set("n", "<leader>rt", function() require('neotest').summary.toggle() end, {})
 
 keymap.set("n", "<leader>e", ":edit <C-R>=expand('%:p:h') . \"/\" <CR>")
 
 ----------------------
 -- Plugin Keybinds
 ----------------------
+
+-- mysitter
+keymap.set("x", "fg", function() require('jacob.mysitter').method_for_node() end, { noremap = true, silent = true})
+keymap.set("o", "ag", function() require('jacob.mysitter').method_for_node() end, { noremap = true, silent = true})
+keymap.set("n", "ag", function() require('jacob.mysitter').method_for_node() end, { noremap = true, silent = true})
 
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
@@ -57,10 +63,14 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window max
 -- telescope
 keymap.set("n", "<leader>tt", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
 keymap.set("n", "<leader>ta", function() require('telescope.builtin').tags() end, {})
+keymap.set("n", "<leader>te", function() require('telescope.builtin').find_files({ cwd = "app/events" }) end, {})
 keymap.set("n", "<leader>tm", function() require('telescope.builtin').find_files({ cwd = "app/models" }) end, {})
 keymap.set("n", "<leader>tc", function() require('telescope.builtin').find_files({ cwd = "app/controllers" }) end, {})
 keymap.set("n", "<leader>ts", function() require('telescope.builtin').find_files({ cwd = "spec" }) end, {})
-keymap.set("n", "<leader>tg", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
+keymap.set("n", "<leader>tga", "<cmd>Telescope live_grep cwd=app<cr>") -- find string in current working directory as you type
+keymap.set("n", "<leader>tgs", "<cmd>Telescope live_grep cwd=spec<cr>") -- find string in current working directory as you type
+keymap.set("n", "<leader>tgl", "<cmd>Telescope live_grep cwd=lib<cr>") -- find string in current working directory as you type
+keymap.set("n", "<leader>tgg", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
 keymap.set("n", "<leader>tw", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>tb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>b", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
@@ -75,3 +85,16 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- restart lsp server (not on youtube nvim video)
 -- keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
+
+-- Trevj plugin
+vim.keymap.set("n", "<leader>k", function() require("trevj").format_at_cursor() end)
+
+-- Projectionist
+vim.keymap.set("n", "<leader>a", ":A<CR>") -- go to alternate file
+
+-- Gitsigns
+vim.keymap.set("n", "<leader>gl", ":Gitsigns toggle_linehl<CR>")
+
+-- Tab to tab
+vim.keymap.set("n", "<tab>", ":bn<CR>")
+vim.keymap.set("n", "<s-tab>", ":bp<CR>")

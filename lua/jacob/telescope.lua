@@ -18,7 +18,8 @@ telescope.setup({
       i = {
         ["<C-p>"] = actions.move_selection_previous, -- move to prev result
         ["<C-n>"] = actions.move_selection_next, -- move to next result
-        ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- send selected to quickfixlist
+        -- ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- send selected to quickfixlist
+        ["<C-q>"] = actions.send_to_qflist + actions.open_qflist, -- send selected to quickfixlist
       },
     },
     file_ignore_patterns = { "^vendor" },

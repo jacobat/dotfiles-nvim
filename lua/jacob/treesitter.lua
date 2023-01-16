@@ -4,12 +4,21 @@ require'nvim-treesitter.configs'.setup {
   sync_install = false,
   playground = { enable = true },
   ignore_install = { },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "gnn",
+      node_incremental = "grn",
+      scope_incremental = "grc",
+      node_decremental = "grm",
+    },
+  },
   highlight = {
     enable = true,
     disable = { },
   },
   indent = {
-    enable = true
+    enable = false
   },
   endwise = {
     enable = true

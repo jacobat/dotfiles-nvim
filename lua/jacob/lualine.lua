@@ -5,7 +5,7 @@ if not status then
 end
 
 -- get lualine nightfly theme
-local lualine_nightfly = require("lualine.themes.wombat")
+local theme = require("lualine.themes.wombat")
 
 -- new colors for theme
 -- local new_colors = {
@@ -31,6 +31,7 @@ local lualine_nightfly = require("lualine.themes.wombat")
 -- configure lualine with modified theme
 lualine.setup({
   options = {
-    theme = lualine_nightfly,
+    theme = theme,
+    icons_enabled = true,
   },
 })

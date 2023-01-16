@@ -8,8 +8,8 @@ end
 -- import luasnip plugin safely
 local luasnip_status, luasnip = pcall(require, "luasnip")
 if not luasnip_status then
-  -- print("luasnip not installed")
-  -- return
+  print("luasnip not installed")
+  return
 end
 
 -- import lspkind plugin safely
@@ -24,11 +24,11 @@ end
 vim.opt.completeopt = "menu,menuone,noselect"
 
 cmp.setup({
-  -- snippet = {
-  --   expand = function(args)
-  --     luasnip.lsp_expand(args.body)
-  --   end,
-  -- },
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
   mapping = cmp.mapping.preset.insert({
     ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
     ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
@@ -37,11 +37,20 @@ cmp.setup({
     ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
     ["<C-e>"] = cmp.mapping.abort(), -- close completion window
     ["<CR>"] = cmp.mapping.confirm({ select = false }),
+    ["<Tab>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end, { "i", "s" }),
   }),
   -- sources for autocompletion
   sources = cmp.config.sources({
-    -- { name = "nvim_lsp" }, -- lsp
-    -- { name = "luasnip" }, -- snippets
+    { name = "nvim_lsp" }, -- lsp
+    { name = "luasnip" }, -- snippets
     { name = "buffer" }, -- text within current buffer
     { name = "path" }, -- file system paths
   }),

@@ -79,6 +79,16 @@ _G.packer_plugins = {
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  ["FixCursorHold.nvim"] = {
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim",
+    url = "https://github.com/antoinemadec/FixCursorHold.nvim"
+  },
+  LuaSnip = {
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -94,23 +104,74 @@ _G.packer_plugins = {
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
   ["cmp-path"] = {
     loaded = true,
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["elixir.nvim"] = {
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/elixir.nvim",
+    url = "https://github.com/mhanberg/elixir.nvim"
   },
   everforest = {
     loaded = true,
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/everforest",
     url = "https://github.com/sainnhe/everforest"
   },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["impatient.nvim"] = {
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/impatient.nvim",
+    url = "https://github.com/lewis6991/impatient.nvim"
+  },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["lsp_signature.nvim"] = {
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
+    url = "https://github.com/ray-x/lsp_signature.nvim"
+  },
+  ["lspsaga.nvim"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\flspsaga\frequire\0" },
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/glepnir/lspsaga.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  neogit = {
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/neogit",
+    url = "https://github.com/TimUntersberger/neogit"
+  },
   neotest = {
-    config = { "\27LJ\2\n=\0\0\3\0\3\0\0046\0\0\0009\0\1\0005\2\2\0D\0\2\0\1\4\0\0\vbundle\texec\nrspec\16tbl_flatten\bvimè\1\1\0\b\0\t\1\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\a\0004\3\3\0006\4\0\0'\6\3\0B\4\2\0025\6\5\0003\a\4\0=\a\6\6B\4\2\0?\4\0\0=\3\b\2B\0\2\1K\0\1\0\radapters\1\0\0\14rspec_cmd\1\0\0\0\18neotest-rspec\nsetup\fneotest\frequire\3ÄÄ¿ô\4\0" },
+    config = { "\27LJ\2\n=\0\0\3\0\3\0\0046\0\0\0009\0\1\0005\2\2\0D\0\2\0\1\4\0\0\vbundle\texec\nrspec\16tbl_flatten\bvim≠\1\1\0\b\0\v\1\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0024\3\3\0006\4\0\0'\6\6\0B\4\2\0025\6\b\0003\a\a\0=\a\t\6B\4\2\0?\4\0\0=\3\n\2B\0\2\1K\0\1\0\radapters\14rspec_cmd\1\0\0\0\18neotest-rspec\voutput\1\0\0\1\0\1\15auto_close\2\nsetup\fneotest\frequire\3ÄÄ¿ô\4\0" },
     loaded = true,
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/neotest",
     url = "https://github.com/nvim-neotest/neotest"
@@ -125,6 +186,11 @@ _G.packer_plugins = {
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -135,11 +201,14 @@ _G.packer_plugins = {
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/nvim-treesitter-endwise",
     url = "https://github.com/RRethy/nvim-treesitter-endwise"
   },
-  ["nvim-trevJ.lua"] = {
-    config = { "\27LJ\2\nË\3\0\0\6\0\23\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\21\0005\3\n\0005\4\4\0005\5\3\0=\5\5\0045\5\6\0=\5\a\0045\5\b\0=\5\t\4=\4\v\0035\4\r\0005\5\f\0=\5\14\0045\5\15\0=\5\16\0045\5\17\0=\5\a\0045\5\18\0=\5\19\4=\4\20\3=\3\22\2B\0\2\1K\0\1\0\15containers\1\0\0\truby\22method_parameters\1\0\2\19final_end_line\2\20final_separator\1\1\0\2\19final_end_line\2\20final_separator\1\narray\1\0\2\19final_end_line\2\20final_separator\1\thash\1\0\0\1\0\2\19final_end_line\2\20final_separator\1\blua\1\0\0\15parameters\1\0\2\19final_end_line\2\20final_separator\1\14arguments\1\0\2\19final_end_line\2\20final_separator\1\22table_constructor\1\0\0\1\0\2\19final_end_line\2\20final_separator\6,\nsetup\ntrevj\frequire\0" },
+  ["nvim-treesitter-textobjects"] = {
     loaded = true,
-    needs_bufread = false,
-    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/opt/nvim-trevJ.lua",
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
+  },
+  ["nvim-trevJ.lua"] = {
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/nvim-trevJ.lua",
     url = "https://github.com/AckslD/nvim-trevJ.lua"
   },
   ["nvim-web-devicons"] = {
@@ -151,6 +220,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  playground = {
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/playground",
+    url = "https://github.com/nvim-treesitter/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,
@@ -166,6 +240,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["trouble.nvim"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0" },
+    loaded = true,
+    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   },
   ["vim-angry"] = {
     loaded = true,
@@ -197,11 +277,6 @@ _G.packer_plugins = {
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/vim-projectionist",
     url = "https://github.com/tpope/vim-projectionist"
   },
-  ["vim-rails"] = {
-    loaded = true,
-    path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/vim-rails",
-    url = "https://github.com/tpope/vim-rails"
-  },
   ["vim-rake"] = {
     loaded = true,
     path = "/Users/u0157733/.local/share/nvim/site/pack/packer/start/vim-rake",
@@ -220,21 +295,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Setup for: nvim-trevJ.lua
-time([[Setup for nvim-trevJ.lua]], true)
-try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\21format_at_cursor\ntrevj\frequireC\1\0\5\0\6\0\b6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0003\4\5\0B\0\4\1K\0\1\0\0\14<leader>k\6n\bset\vkeymap\bvim\0", "setup", "nvim-trevJ.lua")
-time([[Setup for nvim-trevJ.lua]], false)
-time([[packadd for nvim-trevJ.lua]], true)
-vim.cmd [[packadd nvim-trevJ.lua]]
-time([[packadd for nvim-trevJ.lua]], false)
+-- Config for: lspsaga.nvim
+time([[Config for lspsaga.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\flspsaga\frequire\0", "config", "lspsaga.nvim")
+time([[Config for lspsaga.nvim]], false)
 -- Config for: neotest
 time([[Config for neotest]], true)
-try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0046\0\0\0009\0\1\0005\2\2\0D\0\2\0\1\4\0\0\vbundle\texec\nrspec\16tbl_flatten\bvimè\1\1\0\b\0\t\1\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\a\0004\3\3\0006\4\0\0'\6\3\0B\4\2\0025\6\5\0003\a\4\0=\a\6\6B\4\2\0?\4\0\0=\3\b\2B\0\2\1K\0\1\0\radapters\1\0\0\14rspec_cmd\1\0\0\0\18neotest-rspec\nsetup\fneotest\frequire\3ÄÄ¿ô\4\0", "config", "neotest")
+try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0046\0\0\0009\0\1\0005\2\2\0D\0\2\0\1\4\0\0\vbundle\texec\nrspec\16tbl_flatten\bvim≠\1\1\0\b\0\v\1\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0024\3\3\0006\4\0\0'\6\6\0B\4\2\0025\6\b\0003\a\a\0=\a\t\6B\4\2\0?\4\0\0=\3\n\2B\0\2\1K\0\1\0\radapters\14rspec_cmd\1\0\0\0\18neotest-rspec\voutput\1\0\0\1\0\1\15auto_close\2\nsetup\fneotest\frequire\3ÄÄ¿ô\4\0", "config", "neotest")
 time([[Config for neotest]], false)
--- Config for: nvim-trevJ.lua
-time([[Config for nvim-trevJ.lua]], true)
-try_loadstring("\27LJ\2\nË\3\0\0\6\0\23\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\21\0005\3\n\0005\4\4\0005\5\3\0=\5\5\0045\5\6\0=\5\a\0045\5\b\0=\5\t\4=\4\v\0035\4\r\0005\5\f\0=\5\14\0045\5\15\0=\5\16\0045\5\17\0=\5\a\0045\5\18\0=\5\19\4=\4\20\3=\3\22\2B\0\2\1K\0\1\0\15containers\1\0\0\truby\22method_parameters\1\0\2\19final_end_line\2\20final_separator\1\1\0\2\19final_end_line\2\20final_separator\1\narray\1\0\2\19final_end_line\2\20final_separator\1\thash\1\0\0\1\0\2\19final_end_line\2\20final_separator\1\blua\1\0\0\15parameters\1\0\2\19final_end_line\2\20final_separator\1\14arguments\1\0\2\19final_end_line\2\20final_separator\1\22table_constructor\1\0\0\1\0\2\19final_end_line\2\20final_separator\6,\nsetup\ntrevj\frequire\0", "config", "nvim-trevJ.lua")
-time([[Config for nvim-trevJ.lua]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+time([[Config for trouble.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
