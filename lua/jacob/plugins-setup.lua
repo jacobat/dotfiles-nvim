@@ -1,44 +1,38 @@
-packer = require("jacob.packer").setup()
+-- packer = require("jacob.packer").setup()
 
--- add list of plugins to install
-return packer.startup(function(use)
-  -- packer can manage itself
-  use("wbthomason/packer.nvim")
-  use('lewis6991/impatient.nvim') -- speedup loading of nvim
+require("lazy").setup({
+  { "catppuccin/nvim", name = "catppuccin" }, -- catppuccin colorscheme
 
-  use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
+  -- 'lewis6991/impatient.nvim', -- speedup loading of nvim
 
-  use("bluz71/vim-nightfly-guicolors") -- nightfly colorscheme
-  use("sainnhe/everforest") -- everforst color scheme
-  use({ "catppuccin/nvim", as = "catppuccin" }) -- catppuccin colorscheme
+  "nvim-lua/plenary.nvim", -- lua functions that many plugins use
 
-  use('b4winckler/vim-angry') -- arguments as text objects
+  "bluz71/vim-nightfly-guicolors", -- nightfly colorscheme
+  "sainnhe/everforest", -- everforst color scheme
+
+  "b4winckler/vim-angry", -- arguments as text objects
 
   -- For diagnostics output
-  use {
+  {
     "folke/trouble.nvim",
-    requires = "kyazdani42/nvim-web-devicons",
+    dependencies = "kyazdani42/nvim-web-devicons",
     config = function()
-      require("trouble").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
+      require("trouble").setup({})
     end
-  }
+  },
   -- use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
   -- Show indentation markers
-  use "lukas-reineke/indent-blankline.nvim"
+  "lukas-reineke/indent-blankline.nvim",
 
-  use("szw/vim-maximizer") -- maximizes and restores current window
+  "szw/vim-maximizer", -- maximizes and restores current window
 
   -- essential plugins
-  use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
-  -- use("vim-scripts/ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
+  "tpope/vim-surround", -- add, delete, change surroundings (it's awesome)
+  "vim-scripts/ReplaceWithRegister", -- replace with register contents using motion (gr + motion)
 
   -- commenting with gc
-  use("numToStr/Comment.nvim")
+   "numToStr/Comment.nvim",
 
   -- file explorer
   -- use("nvim-tree/nvim-tree.lua")
@@ -47,91 +41,93 @@ return packer.startup(function(use)
   -- use("kyazdani42/nvim-web-devicons")
 
   -- statusline
-  use{
+  {
     "nvim-lualine/lualine.nvim",
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+    dependencies = { 'kyazdani42/nvim-web-devicons', opt = true }
+  },
 
   -- remove search hilights after search
   -- use("romainl/vim-cool")
 
   -- git things
-  use('tpope/vim-fugitive')
-  use('tpope/vim-rhubarb')
-  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+  "tpope/vim-fugitive",
+  "tpope/vim-rhubarb",
+
+  { 'TimUntersberger/neogit', dependencies = 'nvim-lua/plenary.nvim' },
   -- use { "lewis6991/gitsigns.nvim", config = function() require('gitsigns').setup() end } -- show line modifications on left hand side
-  use('lewis6991/gitsigns.nvim')
-
-  -- buffers
-  use {
-    'akinsho/bufferline.nvim',
-    tag = "v3.*",
-    requires = 'kyazdani42/nvim-web-devicons'
-  }
-
+  'lewis6991/gitsigns.nvim',
+--
+--   -- buffers
+--   use {
+--     'akinsho/bufferline.nvim',
+--     tag = "v3.*",
+--     requires = 'kyazdani42/nvim-web-devicons'
+--   }
+--
   -- Ruby
-  use({
+  {
     -- "tpope/vim-rails",
     "tpope/vim-projectionist",
     "tpope/vim-rake",
     "tpope/vim-bundler",
     ft = { "ruby", "eruby" },
-  })
+  },
 
   -- test & rspec
-  use({
+  {
     'nvim-neotest/neotest',
-    requires = {
+    dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
       "antoinemadec/FixCursorHold.nvim",
       "olimorris/neotest-rspec",
     },
     config = require("jacob.neotest").config()
-  })
+  },
 
   -- fuzzy finding w/ telescope
-  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
-  use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+  { "nvim-telescope/telescope-fzf-native.nvim", build = "make" }, -- dependency for better sorting performance
+  { "nvim-telescope/telescope.nvim", branch = "0.1.x" }, -- fuzzy finder
 
   -- autocompletion
-  use("hrsh7th/nvim-cmp") -- completion plugin
-  use("hrsh7th/cmp-buffer") -- source for text in buffer
-  use("hrsh7th/cmp-path") -- source for file system paths
-  use('RRethy/nvim-treesitter-endwise')
+  "hrsh7th/nvim-cmp", -- completion plugin
+  "hrsh7th/cmp-buffer", -- source for text in buffer
+  "hrsh7th/cmp-path", -- source for file system paths
+  'RRethy/nvim-treesitter-endwise',
 
-  use {
+  {
     'AckslD/nvim-trevJ.lua',
     config = require("jacob.trevj").config()
-  }
+  },
 
   -- Elixir
-  use({ "mhanberg/elixir.nvim", requires = {
-    "neovim/nvim-lspconfig",
-    "nvim-lua/plenary.nvim"
-  }})
+  { "mhanberg/elixir.nvim",
+    dependencies = {
+      "neovim/nvim-lspconfig",
+      "nvim-lua/plenary.nvim"
+    }
+  },
 
   -- snippets
-  use("L3MON4D3/LuaSnip") -- snippet engine
-  use("saadparwaiz1/cmp_luasnip") -- for autocompletion
-  use("rafamadriz/friendly-snippets") -- useful snippets
+  "L3MON4D3/LuaSnip", -- snippet engine
+  "saadparwaiz1/cmp_luasnip", -- for autocompletion
+  "rafamadriz/friendly-snippets", -- useful snippets
 
   -- managing & installing lsp servers, linters & formatters
   --use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
   --use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
 
   -- configuring lsp servers
-  use("neovim/nvim-lspconfig") -- easily configure language servers
-  use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-  use { "ray-x/lsp_signature.nvim", }
-  use({ "glepnir/lspsaga.nvim",
+  "neovim/nvim-lspconfig", -- easily configure language servers
+  "hrsh7th/cmp-nvim-lsp", -- for autocompletion
+  "ray-x/lsp_signature.nvim",
+  { "glepnir/lspsaga.nvim",
     branch = "main",
     config = function()
-      require("lspsaga").setup({
-        -- your configuration
-      })
+      require("lspsaga").setup({})
     end,
-  }) -- enhanced lsp uis
+  }, -- enhanced lsp uis
+
   -- use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
   -- use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
@@ -140,22 +136,16 @@ return packer.startup(function(use)
   -- use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
 
   -- treesitter configuration
-  use({
+  {
     "nvim-treesitter/nvim-treesitter",
-    run = function()
+    build = function()
       require("nvim-treesitter.install").update({ with_sync = true })
     end,
-  })
-  use('nvim-treesitter/playground')
-  use('nvim-treesitter/nvim-treesitter-textobjects')
+  },
+--   use('nvim-treesitter/playground')
+  'nvim-treesitter/nvim-treesitter-textobjects',
 
   -- auto closing
   -- use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
   -- use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
-
-  -- git integration
-
-  if packer_bootstrap then
-    require("packer").sync()
-  end
-end)
+})
