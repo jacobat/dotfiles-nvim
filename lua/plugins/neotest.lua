@@ -1,6 +1,12 @@
-local M = {}
-function M.config()
-  return function()
+return {
+  'nvim-neotest/neotest',
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-treesitter/nvim-treesitter",
+    "antoinemadec/FixCursorHold.nvim",
+    "olimorris/neotest-rspec",
+  },
+  config = function()
     require('neotest').setup({
       output = {
         auto_close = true
@@ -18,5 +24,4 @@ function M.config()
       }
     })
   end
-end
-return M
+}

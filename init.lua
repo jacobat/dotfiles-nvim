@@ -14,19 +14,19 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("jacob.options")
-require("jacob.plugins-setup")
+
+vim.g.mapleader = " "
+
+require("lazy").setup("plugins")
+
 require("jacob.telescope")
 require("jacob.keymaps")
 require("jacob.colorscheme")
-require("jacob.lualine")
-require("jacob.comment")
 require("jacob.cmp")
-require("jacob.neotest")
 require("jacob.treesitter")
 require("jacob.gitsigns")
 require("jacob.lspconfig")
 require("jacob.lsp_signature")
-require("neogit").setup()
 require("jacob.elixir")
 require("jacob.elixir-ls")
 -- require("jacob.lsp-saga")

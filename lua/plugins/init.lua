@@ -1,6 +1,4 @@
--- packer = require("jacob.packer").setup()
-
-require("lazy").setup({
+return {
   { "catppuccin/nvim", name = "catppuccin" }, -- catppuccin colorscheme
 
   -- 'lewis6991/impatient.nvim', -- speedup loading of nvim
@@ -12,14 +10,6 @@ require("lazy").setup({
 
   "b4winckler/vim-angry", -- arguments as text objects
 
-  -- For diagnostics output
-  {
-    "folke/trouble.nvim",
-    dependencies = "kyazdani42/nvim-web-devicons",
-    config = function()
-      require("trouble").setup({})
-    end
-  },
   -- use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
   -- Show indentation markers
@@ -31,20 +21,11 @@ require("lazy").setup({
   "tpope/vim-surround", -- add, delete, change surroundings (it's awesome)
   "vim-scripts/ReplaceWithRegister", -- replace with register contents using motion (gr + motion)
 
-  -- commenting with gc
-   "numToStr/Comment.nvim",
-
   -- file explorer
   -- use("nvim-tree/nvim-tree.lua")
 
   -- vs-code like icons
   -- use("kyazdani42/nvim-web-devicons")
-
-  -- statusline
-  {
-    "nvim-lualine/lualine.nvim",
-    dependencies = { 'kyazdani42/nvim-web-devicons', opt = true }
-  },
 
   -- remove search hilights after search
   -- use("romainl/vim-cool")
@@ -53,7 +34,6 @@ require("lazy").setup({
   "tpope/vim-fugitive",
   "tpope/vim-rhubarb",
 
-  { 'TimUntersberger/neogit', dependencies = 'nvim-lua/plenary.nvim' },
   -- use { "lewis6991/gitsigns.nvim", config = function() require('gitsigns').setup() end } -- show line modifications on left hand side
   'lewis6991/gitsigns.nvim',
 --
@@ -82,7 +62,7 @@ require("lazy").setup({
       "antoinemadec/FixCursorHold.nvim",
       "olimorris/neotest-rspec",
     },
-    config = require("jacob.neotest").config()
+ --   config = require("jacob.neotest").config()
   },
 
   -- fuzzy finding w/ telescope
@@ -94,11 +74,6 @@ require("lazy").setup({
   "hrsh7th/cmp-buffer", -- source for text in buffer
   "hrsh7th/cmp-path", -- source for file system paths
   'RRethy/nvim-treesitter-endwise',
-
-  {
-    'AckslD/nvim-trevJ.lua',
-    config = require("jacob.trevj").config()
-  },
 
   -- Elixir
   { "mhanberg/elixir.nvim",
@@ -121,12 +96,6 @@ require("lazy").setup({
   "neovim/nvim-lspconfig", -- easily configure language servers
   "hrsh7th/cmp-nvim-lsp", -- for autocompletion
   "ray-x/lsp_signature.nvim",
-  { "glepnir/lspsaga.nvim",
-    branch = "main",
-    config = function()
-      require("lspsaga").setup({})
-    end,
-  }, -- enhanced lsp uis
 
   -- use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
   -- use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
@@ -148,4 +117,5 @@ require("lazy").setup({
   -- auto closing
   -- use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
   -- use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
-})
+}
+
