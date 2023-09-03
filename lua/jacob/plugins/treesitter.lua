@@ -61,6 +61,8 @@ return {
             -- You can optionally set descriptions to the mappings (used in the desc parameter of
             -- nvim_buf_set_keymap) which plugins like which-key display
             ["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
+            ["aa"] = "@parameter.outer",
+            ["ia"] = "@parameter.inner",
           },
           -- You can choose the select mode (default is charwise 'v')
           --
@@ -84,6 +86,18 @@ return {
           -- * selection_mode: eg 'v'
           -- and should return true of false
           include_surrounding_whitespace = true,
+        },
+
+        swap = {
+          enable = true,
+          swap_next = {
+            ["<leader>a"] = "@parameter.inner",
+            ["<leader>fn"] = "@function.outer",
+          },
+          swap_previous = {
+            ["<leader>A"] = "@parameter.inner",
+            ["<leader>fp"] = "@function.outer",
+          },
         },
 
         move = {
