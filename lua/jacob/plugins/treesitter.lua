@@ -123,5 +123,11 @@ return {
       },
 
     }
-  end
+  end,
+  config = function()
+    -- Hack to make indentation not break when typing a dot
+    -- https://github.com/nvim-treesitter/nvim-treesitter/issues/3363
+    -- https://github.com/tree-sitter/tree-sitter-ruby/issues/230
+    vim.cmd('autocmd FileType ruby setlocal indentkeys-=.')
+  end,
 }
