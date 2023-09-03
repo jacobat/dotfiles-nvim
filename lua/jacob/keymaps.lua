@@ -108,3 +108,9 @@ vim.keymap.set("n", "<leader>gl", ":Gitsigns toggle_linehl<CR>")
 -- Tab to tab
 vim.keymap.set("n", "<tab>", ":bn<CR>")
 vim.keymap.set("n", "<s-tab>", ":bp<CR>")
+
+-- Lsp
+keymap.set('n', '<space>e', vim.diagnostic.open_float)
+keymap.set('n', '[d', vim.diagnostic.goto_prev)
+keymap.set('n', ']d', vim.diagnostic.goto_next)
+keymap.set('n', '<space>q', vim.diagnostic.setloclist)
