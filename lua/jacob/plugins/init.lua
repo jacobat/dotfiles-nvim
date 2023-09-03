@@ -10,4 +10,5 @@ require("jacob.plugins.lazy").setup({
 	require("jacob.plugins.tabline"),
 	require("jacob.plugins.lsp"),
 	require("jacob.plugins.nvim-cmp"),
+	require("jacob.plugins.neotest"),
 })
