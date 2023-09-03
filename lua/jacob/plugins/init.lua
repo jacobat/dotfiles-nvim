@@ -7,4 +7,5 @@ require("jacob.plugins.lazy").setup({
 	require("jacob.plugins.indent-blankline"),
 	require("jacob.plugins.trevj"),
 	require("jacob.plugins.octo"),
+	require("jacob.plugins.tabline"),
 })
