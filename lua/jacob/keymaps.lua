@@ -49,6 +49,7 @@ keymap.set("n", "<leader>e", ":edit <C-R>=expand('%:p:h') . \"/\" <CR>")
 keymap.set("n", "<leader>rr", function() require('neotest').run.run() end, {})
 keymap.set("n", "<leader>rl", function() require('neotest').run.run_last() end, {})
 keymap.set("n", "<leader>rs", function() require('neotest').run.run(vim.fn.expand('%')) end, {})
+keymap.set("n", "<leader>rf", function() require('neotest').run.run(vim.fn.expand('%')) end, {})
 keymap.set("n", "<leader>ra", function() require('neotest').run.run(vim.fn.getcwd()) end, {})
 keymap.set("n", "<leader>rt", function() require('neotest').summary.toggle() end, {})
 
