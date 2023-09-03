@@ -1,5 +1,8 @@
 return {
   'nvim-treesitter/nvim-treesitter',
+  dependencies = {
+    'RRethy/nvim-treesitter-endwise',
+  },
   build = ':TSUpdate',
   opts = function() 
     require'nvim-treesitter.configs'.setup {
@@ -15,6 +18,8 @@ return {
 
       -- List of parsers to ignore installing (for "all")
       ignore_install = { "javascript" },
+
+      endwise = { enable = true },
 
       ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
       -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!

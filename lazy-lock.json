@@ -9,6 +9,7 @@
   "nvim-cmp": { "branch": "main", "commit": "5dce1b778b85c717f6614e3f4da45e9f19f54435" },
   "nvim-lspconfig": { "branch": "master", "commit": "a27356f1ef9c11e1f459cc96a3fcac5c265e72d6" },
   "nvim-treesitter": { "branch": "master", "commit": "17b943e7c5cc2b2db3ac7b5720fbd42e75a00d8d" },
+  "nvim-treesitter-endwise": { "branch": "master", "commit": "9298b3ac8fd6d0d8f9e321194c6d3fd37e417cf9" },
   "nvim-treesitter-textobjects": { "branch": "master", "commit": "bd103502252027434ec42f628d2dbf54821d4ce6" },
   "nvim-trevJ.lua": { "branch": "main", "commit": "7f401543b5cd5496b6120dddcab394c29983a55c" },
   "nvim-web-devicons": { "branch": "master", "commit": "cfc8824cc1db316a276b36517f093baccb8e799a" },
