@@ -6,4 +6,5 @@ require("jacob.plugins.lazy").setup({
 	require("jacob.plugins.treesitter-textobjects"),
 	require("jacob.plugins.indent-blankline"),
 	require("jacob.plugins.trevj"),
+	require("jacob.plugins.octo"),
 })
