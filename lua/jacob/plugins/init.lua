@@ -11,4 +11,5 @@ require("jacob.plugins.lazy").setup({
 	require("jacob.plugins.lsp"),
 	require("jacob.plugins.nvim-cmp"),
 	require("jacob.plugins.neotest"),
+	require("jacob.plugins.comment"),
 })
