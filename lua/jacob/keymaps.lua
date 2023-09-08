@@ -86,6 +86,8 @@ keymap.set("n", "<leader>tw", "<cmd>Telescope grep_string word_match=-w<cr>") --
 keymap.set("n", "<leader>tb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>b", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>th", "<cmd>Telescope help_tags<cr>") -- list available help tags
+keymap.set("n", "<leader>hm", "<cmd>Telescope harpoon marks<cr>") -- list available harpoon marks
+keymap.set("n", "<leader>ht", function() require('harpoon.mark').toggle_file() end, {})
 keymap.set("n", "<leader>l", function() require('telescope.builtin').current_buffer_tags() end, {})
 
 -- telescope git commands (not on youtube nvim video)

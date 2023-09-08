@@ -13,4 +13,5 @@ require("jacob.plugins.lazy").setup({
 	require("jacob.plugins.nvim-cmp"),
 	require("jacob.plugins.neotest"),
 	require("jacob.plugins.comment"),
+	require("jacob.plugins.harpoon"),
 })
