@@ -52,6 +52,9 @@ keymap.set("n", "<leader>rs", function() require('neotest').run.run(vim.fn.expan
 keymap.set("n", "<leader>rf", function() require('neotest').run.run(vim.fn.expand('%')) end, {})
 keymap.set("n", "<leader>ra", function() require('neotest').run.run(vim.fn.getcwd()) end, {})
 keymap.set("n", "<leader>rt", function() require('neotest').summary.toggle() end, {})
+keymap.set("n", "<leader>ro", function() require('neotest').output.open() end, {})
+keymap.set("n", "<leader>rp", function() require('neotest').jump.prev({ status = "failed" }) end, {})
+keymap.set("n", "<leader>rn", function() require('neotest').jump.next({ status = "failed" }) end, {})
 
 -- vim-maximizer
 -- keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
