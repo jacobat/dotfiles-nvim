@@ -15,4 +15,5 @@ require("jacob.plugins.lazy").setup({
 	require("jacob.plugins.neotest"),
 	require("jacob.plugins.comment"),
 	require("jacob.plugins.harpoon"),
+	require("jacob.plugins.slim"),
 })
