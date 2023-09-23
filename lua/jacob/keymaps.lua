@@ -1,5 +1,6 @@
 -- set leader key to space
 vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
 local keymap = vim.keymap -- for conciseness
 
@@ -91,7 +92,10 @@ keymap.set("n", "<leader>b", "<cmd>Telescope buffers<cr>") -- list open buffers 
 keymap.set("n", "<leader>th", "<cmd>Telescope help_tags<cr>") -- list available help tags
 keymap.set("n", "<leader>hm", "<cmd>Telescope harpoon marks<cr>") -- list available harpoon marks
 keymap.set("n", "<leader>ht", function() require('harpoon.mark').toggle_file() end, {})
-keymap.set("n", "<leader>l", function() require('telescope.builtin').current_buffer_tags() end, {})
+keymap.set("n", "<leader>tlr", function() require('telescope.builtin').lsp_references() end, {})
+keymap.set("n", "<leader>tld", function() require('telescope.builtin').lsp_definitions() end, {})
+keymap.set("n", "<leader>,", function() require('telescope.builtin').current_buffer_tags() end, {})
+keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, {})
 
 -- telescope git commands (not on youtube nvim video)
 keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- list all git commits (use <cr> to checkout) ["gc" for git commits]
