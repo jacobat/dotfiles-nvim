@@ -66,8 +66,8 @@ return {
             -- You can optionally set descriptions to the mappings (used in the desc parameter of
             -- nvim_buf_set_keymap) which plugins like which-key display
             ["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
-            ["aa"] = "@parameter.outer",
-            ["ia"] = "@parameter.inner",
+            -- ["aa"] = "@parameter.outer",
+            -- ["ia"] = "@parameter.inner",
           },
           -- You can choose the select mode (default is charwise 'v')
           --
@@ -77,7 +77,7 @@ return {
           -- and should return the mode ('v', 'V', or '<c-v>') or a table
           -- mapping query_strings to modes.
           selection_modes = {
-            ['@parameter.outer'] = 'v', -- charwise
+            -- ['@parameter.outer'] = 'v', -- charwise
             ['@function.outer'] = 'V', -- linewise
             ['@class.outer'] = '<c-v>', -- blockwise
           },
