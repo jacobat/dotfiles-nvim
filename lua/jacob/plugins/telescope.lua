@@ -5,5 +5,8 @@ return {
     'nvim-tree/nvim-web-devicons',
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make" }, -- dependency for better sorting performance
     "nvim-telescope/telescope-live-grep-args.nvim",
-  }
+  },
+  config = function()
+    require("telescope").load_extension("fzf")
+  end,
 }
