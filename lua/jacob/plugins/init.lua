@@ -20,4 +20,5 @@ require("jacob.plugins.lazy").setup({
   require("jacob.plugins.dressing"),
   require("jacob.plugins.elm"),
   require("jacob.plugins.angry"),
+  require("jacob.plugins.surround"),
 })
