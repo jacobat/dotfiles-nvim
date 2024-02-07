@@ -75,6 +75,7 @@ end
 
 -- telescope
 keymap.set("n", "<leader>tt", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
+keymap.set("n", "<leader>tr", "<cmd>Telescope git_files<cr>") -- find files within current working directory, respects .gitignore
 keymap.set("n", "<leader><leader>", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
 keymap.set("n", "<leader>ta", function() require('telescope.builtin').tags() end, {})
 keymap.set("n", "<leader>tfe", function() find_files_in("app/events") end, {})
