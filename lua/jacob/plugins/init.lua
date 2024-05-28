@@ -21,4 +21,7 @@ require("jacob.plugins.lazy").setup({
   require("jacob.plugins.angry"),
   require("jacob.plugins.surround"),
   require("jacob.plugins.other"),
+  require("jacob.plugins.abolish"),
+  require("jacob.plugins.arrow"),
+  require("jacob.plugins.oil"),
 })
