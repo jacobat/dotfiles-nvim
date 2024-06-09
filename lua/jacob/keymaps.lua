@@ -125,3 +125,21 @@ keymap.set('n', '<leader>de', vim.diagnostic.open_float)
 keymap.set('n', '[d', vim.diagnostic.goto_prev)
 keymap.set('n', ']d', vim.diagnostic.goto_next)
 keymap.set('n', '<leader>dq', vim.diagnostic.setloclist)
+
+-- Close any of the patterns with just q
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = {
+        "checkhealth",
+        "fugitive*",
+        "git",
+        "help",
+        "lspinfo",
+        "netrw",
+        "notify",
+        "qf",
+        "query",
+    },
+    callback = function()
+        vim.keymap.set("n", "q", vim.cmd.close, { desc = "Close the current buffer", buffer = true })
+    end,
+})
