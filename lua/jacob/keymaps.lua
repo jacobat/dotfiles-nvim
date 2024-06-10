@@ -143,3 +143,7 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.keymap.set("n", "q", vim.cmd.close, { desc = "Close the current buffer", buffer = true })
     end,
 })
+
+-- Oil
+keymap.set('n', '<leader>od', function() require('oil').open_float() end)
+keymap.set('n', '<leader>of', function() require('oil').open_float(vim.fn.getcwd()) end)
