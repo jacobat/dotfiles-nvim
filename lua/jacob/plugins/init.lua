@@ -24,4 +24,5 @@ require("jacob.plugins.lazy").setup({
   require("jacob.plugins.abolish"),
   require("jacob.plugins.arrow"),
   require("jacob.plugins.oil"),
+  require("jacob.plugins.rust-lang"),
 })
