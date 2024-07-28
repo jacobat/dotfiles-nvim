@@ -25,4 +25,5 @@ require("jacob.plugins.lazy").setup({
   require("jacob.plugins.arrow"),
   require("jacob.plugins.oil"),
   require("jacob.plugins.rust-lang"),
+  require("jacob.plugins.rustacean"),
 })
