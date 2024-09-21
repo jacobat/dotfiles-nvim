@@ -10,6 +10,9 @@ return {
           if client.supports_method('referencesProvider') then
             vim.keymap.set("n", "<leader>rr", "<cmd>lua vim.lsp.buf.references(nil, { loclist = true })<cr>", { noremap = true, silent = true })
           end
+          if client.supports_method('textDocument/codeAction') then
+            vim.keymap.set("n", "<leader>rc", "<cmd>lua vim.lsp.buf.code_action()<cr>", { noremap = true, silent = true })
+          end
         end,
       })
 
