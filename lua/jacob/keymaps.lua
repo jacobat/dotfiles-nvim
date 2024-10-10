@@ -87,7 +87,8 @@ end
 
 -- telescope
 keymap.set("n", "<leader>tt", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
-keymap.set("n", "<leader>tr", "<cmd>Telescope git_files<cr>") -- find files within current working directory, respects .gitignore
+keymap.set("n", "<leader>tr", function() require('telescope').extensions.recent_files.pick({only_cwd = true}) end, {}) -- find recently opened files
+keymap.set("n", "<leader>tgg", "<cmd>Telescope git_files<cr>") -- find files within current working directory, respects .gitignore
 keymap.set("n", "<leader><leader>", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
 keymap.set("n", "<leader>ta", function() require('telescope.builtin').tags() end, {})
 keymap.set("n", "<leader>tfe", function() find_files_in("app/events") end, {})
@@ -98,7 +99,7 @@ keymap.set("n", "<leader>tfl", function() find_files_in("lib") end, {})
 keymap.set("n", "<leader>tga", function() require('telescope').extensions.live_grep_args.live_grep_args() end, {}) -- find string in current working directory as you type
 keymap.set("n", "<leader>tgs", "<cmd>Telescope live_grep cwd=spec<cr>") -- find string in current working directory as you type
 keymap.set("n", "<leader>tgl", "<cmd>Telescope live_grep cwd=lib<cr>") -- find string in current working directory as you type
-keymap.set("n", "<leader>tgg", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
+keymap.set("n", "<leader>tgd", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
 keymap.set("n", "<leader>tw", "<cmd>Telescope grep_string word_match=-w<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>tb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>b", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
