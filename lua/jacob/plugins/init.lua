@@ -27,4 +27,5 @@ require("jacob.plugins.lazy").setup({
   require("jacob.plugins.rust-lang"),
   require("jacob.plugins.rustacean"),
   require("jacob.plugins.neogit"),
+  require("jacob.plugins.blame"),
 })
