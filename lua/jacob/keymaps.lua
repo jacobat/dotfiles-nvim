@@ -170,3 +170,8 @@ vim.api.nvim_create_autocmd("FileType", {
 -- Oil
 keymap.set('n', '<leader>od', function() require('oil').open_float() end)
 keymap.set('n', '<leader>of', function() require('oil').open_float(vim.fn.getcwd()) end)
+
+-- Gitportal
+vim.keymap.set("n", "<leader>gp", function() require('gitportal').open_file_in_browser() end)
+vim.keymap.set("v", "<leader>gp", function() require('gitportal').open_file_in_browser() end)
+vim.keymap.set('n', '<leader>ig', function() require('gitportal').open_file_in_neovim() end) 
