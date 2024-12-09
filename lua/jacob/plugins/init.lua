@@ -29,4 +29,5 @@ require("jacob.plugins.lazy").setup({
   require("jacob.plugins.neogit"),
   require("jacob.plugins.blame"),
   require("jacob.plugins.gitportal"),
+  require("jacob.plugins.ast-grep"),
 })
