@@ -175,3 +175,7 @@ keymap.set('n', '<leader>of', function() require('oil').open_float(vim.fn.getcwd
 vim.keymap.set("n", "<leader>gp", function() require('gitportal').open_file_in_browser() end)
 vim.keymap.set("v", "<leader>gp", function() require('gitportal').open_file_in_browser() end)
 vim.keymap.set('n', '<leader>ig', function() require('gitportal').open_file_in_neovim() end) 
+
+-- Agitator
+vim.keymap.set("n", "<leader>gb", function() require('agitator').git_blame_toggle() end)
+
