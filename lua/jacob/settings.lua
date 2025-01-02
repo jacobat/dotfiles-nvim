@@ -39,3 +39,13 @@ opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
 opt.iskeyword:append("-") -- consider string-string as whole word
+
+-- Format on save
+vim.api.nvim_create_augroup('AutoFormatting', {})
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = '*.rs',
+  group = 'AutoFormatting',
+  callback = function()
+    vim.lsp.buf.format({ async = true })
+  end,
+})
