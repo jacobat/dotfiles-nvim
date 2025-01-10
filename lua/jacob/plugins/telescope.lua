@@ -8,7 +8,23 @@ return {
     "nvim-telescope/telescope-live-grep-args.nvim",
   },
   config = function()
+    local lga_actions = require("telescope-live-grep-args.actions")
+    local actions = require('telescope.actions')
     require("telescope").load_extension("fzf")
     require("telescope").load_extension("recent_files")
+    require("telescope").setup {
+      extensions = {
+        live_grep_args = {
+          mappings = {
+            i = {
+              ["<C-k>"] = lga_actions.quote_prompt(),
+              ["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob "}),
+              ["<C-s>"] = lga_actions.quote_prompt({ postfix = " --iglob packs/**/*.rb --iglob !**/spec/**"}),
+              ["<C-space>"] = actions.to_fuzzy_refine,
+            }
+          }
+        }
+      }
+    }
   end,
 }
