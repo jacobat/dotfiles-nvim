@@ -13,6 +13,7 @@ return {
           if client.supports_method('textDocument/codeAction') then
             vim.keymap.set("n", "<leader>rc", "<cmd>lua vim.lsp.buf.code_action()<cr>", { noremap = true, silent = true })
           end
+          vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>")
         end,
       })
 
