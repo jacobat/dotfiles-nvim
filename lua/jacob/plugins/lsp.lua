@@ -1,7 +1,8 @@
 return {
   { "neovim/nvim-lspconfig",
     config = function()
-      require'lspconfig'.solargraph.setup{}
+      -- require'lspconfig'.solargraph.setup{}
+      require'lspconfig'.ruby_lsp.setup({})
       require'lspconfig'.elmls.setup{}
 
       vim.api.nvim_create_autocmd('LspAttach', {
