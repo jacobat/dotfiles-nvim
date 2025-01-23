@@ -140,8 +140,8 @@ vim.keymap.set("n", "<leader>a", ":A<CR>") -- go to alternate file
 vim.keymap.set("n", "<leader>gl", ":Gitsigns toggle_linehl<CR>")
 
 -- Tab to tab
-vim.keymap.set("n", "<tab>", ":bn<CR>")
-vim.keymap.set("n", "<s-tab>", ":bp<CR>")
+vim.keymap.set("n", "<tab>", "<cmd>bn<CR>")
+vim.keymap.set("n", "<s-tab>", "<cmd>bp<CR>")
 
 -- Lsp
 keymap.set('n', '<leader>de', vim.diagnostic.open_float)
