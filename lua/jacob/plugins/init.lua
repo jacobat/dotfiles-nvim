@@ -31,5 +31,6 @@ require("jacob.plugins.lazy").setup({
   require("jacob.plugins.blame"),
   require("jacob.plugins.gitportal"),
   require("jacob.plugins.ast-grep"),
-  -- require("jacob.plugins.mini"),
+  require("jacob.plugins.noice"),
+  require("jacob.plugins.mini"),
 })
