@@ -13,12 +13,6 @@ return {
     "rcarriga/nvim-notify",
   },
   config = function()
-    require("notify").setup({
-      timeout = 1000,
-      fps = 30,
-      stages = "slide_out",
-    })
-
     require("noice").setup({
       lsp = {
         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
@@ -28,7 +22,9 @@ return {
           ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
         },
       },
-
+      notify = {
+        view = "mini"
+      },
       messages = {
         view = "mini",
         view_error = "mini",
