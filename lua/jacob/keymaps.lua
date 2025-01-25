@@ -98,11 +98,11 @@ keymap.set("n", "<leader>tr", function() require('telescope').extensions.recent_
 keymap.set("n", "<leader>tgg", "<cmd>Telescope git_files<cr>") -- find files within current working directory, respects .gitignore
 keymap.set("n", "<leader><leader>", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
 keymap.set("n", "<leader>ta", function() require('telescope.builtin').tags() end, {})
-keymap.set("n", "<leader>tfe", function() find_files_in("app/events") end, {})
-keymap.set("n", "<leader>tfm", function() find_files_in("app/models") end, {})
-keymap.set("n", "<leader>tfc", function() find_files_in("app/controllers") end, {})
-keymap.set("n", "<leader>tfs", function() find_files_in("spec") end, {})
-keymap.set("n", "<leader>tfl", function() find_files_in("lib") end, {})
+keymap.set("n", "<leader>pfe", function() find_files_in("app/events") end, { desc = "Find app/events/ in packs" })
+keymap.set("n", "<leader>pfm", function() find_files_in("app/models") end, { desc = "Find app/models/ in packs" })
+keymap.set("n", "<leader>pfc", function() find_files_in("app/controllers") end, { desc = "Find app/controllers/ in packs" })
+keymap.set("n", "<leader>pfs", function() find_files_in("spec") end, { desc = "Find spec/ in packs" })
+keymap.set("n", "<leader>pfl", function() find_files_in("lib") end, { desc = "Find lib/ in packs" })
 keymap.set("n", "<leader>tga", function() require('telescope').extensions.live_grep_args.live_grep_args() end, {}) -- find string in current working directory as you type
 keymap.set("n", "<leader>tgs", "<cmd>Telescope live_grep cwd=spec<cr>") -- find string in current working directory as you type
 keymap.set("n", "<leader>tgl", "<cmd>Telescope live_grep cwd=lib<cr>") -- find string in current working directory as you type
@@ -116,6 +116,7 @@ keymap.set("n", "<leader>ht", function() require('harpoon.mark').toggle_file() e
 keymap.set("n", "<leader>tlr", function() require('telescope.builtin').lsp_references() end, {})
 keymap.set("n", "<leader>tld", function() require('telescope.builtin').lsp_definitions() end, {})
 keymap.set("n", "<leader>,", function() require('telescope.builtin').current_buffer_tags() end, {})
+keymap.set("n", "<leader>tq", function() require('telescope.builtin').quickfix() end, {})
 keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, {})
 
 -- telescope git commands (not on youtube nvim video)

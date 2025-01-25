@@ -13,8 +13,21 @@ return {
     require("telescope").load_extension("fzf")
     require("telescope").load_extension("recent_files")
     require("telescope").setup {
+      defaults = {
+        mappings = {
+          i = {
+            ["<C-f>"] = actions.send_selected_to_qflist + actions.open_qflist,
+          }
+        },
+      },
+      pickers = {
+        find_files = {
+          theme = "ivy"
+        },
+      },
       extensions = {
         live_grep_args = {
+          theme = "ivy",
           mappings = {
             i = {
               ["<C-k>"] = lga_actions.quote_prompt(),
