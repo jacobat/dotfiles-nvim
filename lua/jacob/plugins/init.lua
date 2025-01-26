@@ -12,7 +12,7 @@ require("jacob.plugins.lazy").setup({
 	require("jacob.plugins.lsp"),
 	require("jacob.plugins.nvim-cmp"),
 	-- require("jacob.plugins.blink"),
-	require("jacob.plugins.neotest"),
+	-- require("jacob.plugins.neotest"),
 	require("jacob.plugins.comment"),
 	require("jacob.plugins.harpoon"),
 	require("jacob.plugins.slim"),
@@ -33,4 +33,5 @@ require("jacob.plugins.lazy").setup({
   require("jacob.plugins.ast-grep"),
   require("jacob.plugins.noice"),
   require("jacob.plugins.mini"),
+  require("jacob.plugins.rspec"),
 })
