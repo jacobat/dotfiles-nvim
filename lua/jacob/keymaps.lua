@@ -56,7 +56,8 @@ vim.api.nvim_set_keymap('n', '<leader>do', '<cmd>lua vim.diagnostic.open_float()
 vim.api.nvim_set_keymap('n', '<leader>d[', '<cmd>lua vim.diagnostic.goto_prev()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>d]', '<cmd>lua vim.diagnostic.goto_next()<CR>', { noremap = true, silent = true })
 keymap.set('n', '<leader>dd', function()
-  require("telescope.builtin").diagnostics({layout_strategy='center', layout_config={width=0.8}})
+  local themes = require('telescope.themes')
+  require("telescope.builtin").diagnostics(themes.get_dropdown())
 end, opts)
 
 
