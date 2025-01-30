@@ -2,6 +2,8 @@ require("jacob.plugins.lazy").setup({
 	require("jacob.plugins.tokyonight"),
 	require("jacob.plugins.aura"),
 	require("jacob.plugins.nightfox"),
+	require("jacob.plugins.oxocarbon"),
+  require("jacob.plugins.oldworld"),
 	require("jacob.plugins.lualine"),
 	require("jacob.plugins.telescope"),
 	require("jacob.plugins.treesitter"),
