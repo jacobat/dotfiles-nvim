@@ -37,4 +37,5 @@ require("jacob.plugins.lazy").setup({
   require("jacob.plugins.noice"),
   require("jacob.plugins.mini"),
   require("jacob.plugins.rspec"),
+  require("jacob.plugins.autosession"),
 })
