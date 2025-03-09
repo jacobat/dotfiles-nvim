@@ -2,7 +2,7 @@ require("jacob.settings")
 require("jacob.keymaps")
 require("jacob.plugins")
 
-vim.cmd("colorscheme carbonfox")
+vim.cmd("colorscheme oldworld")
 
 function run_tests()
   local buf = vim.api.nvim_create_buf(false, true)
