@@ -21,6 +21,7 @@ require("jacob.plugins.lazy").setup({
 	require("jacob.plugins.slim"),
 	require("jacob.plugins.eunuch"),
   require("jacob.plugins.dressing"),
+  require("jacob.plugins.dispatch"),
   require("jacob.plugins.elm"),
   require("jacob.plugins.angry"),
   require("jacob.plugins.surround"),
