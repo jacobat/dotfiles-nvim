@@ -39,6 +39,10 @@ return {
         disable = function(lang, buf)
           local max_filesize = 100 * 1024 -- 100 KB
           local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+          -- Slim breaks when trying to type a bracket([) in insert mode on a output line, IE. `= foo[`
+          if lang == "slim" then
+            return true
+          end
           if ok and stats and stats.size > max_filesize then
             return true
           end
