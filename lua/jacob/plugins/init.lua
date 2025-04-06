@@ -40,4 +40,5 @@ require("jacob.plugins.lazy").setup({
   require("jacob.plugins.rspec"),
   require("jacob.plugins.autosession"),
   require("jacob.plugins.buvvers"),
+  require("jacob.plugins.overseer"),
 })
