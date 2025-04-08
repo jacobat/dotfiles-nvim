@@ -66,21 +66,21 @@ end, opts)
 ----------------------
 
 -- tests
--- keymap.set("n", "<leader>rr", function() require('neotest').run.run() end, { desc = "Run nearest test" })
--- keymap.set("n", "<leader>rl", function() require('neotest').run.run_last() end, { desc = "Rerun last test" })
--- keymap.set("n", "<leader>rs", function() require('neotest').run.run(vim.fn.expand('%')) end, { desc = "Run tests for current file" })
--- keymap.set("n", "<leader>rf", function() require('neotest').run.run(vim.fn.expand('%')) end, { desc = "Run tests for current file" })
--- keymap.set("n", "<leader>ra", function() require('neotest').run.run(vim.fn.getcwd()) end, { desc = "Run tests for cwd" })
--- keymap.set("n", "<leader>rt", function() require('neotest').summary.toggle() end, { desc = "Open neotest summary" })
--- keymap.set("n", "<leader>ro", function() require('neotest').output.open() end, { desc = "Open neotest output" })
+keymap.set("n", "<leader>rr", function() require('neotest').run.run() end, { desc = "Run nearest test" })
+keymap.set("n", "<leader>rl", function() require('neotest').run.run_last() end, { desc = "Rerun last test" })
+keymap.set("n", "<leader>rs", function() require('neotest').run.run({vim.fn.expand('%')}) end, { desc = "Run tests for current file" })
+keymap.set("n", "<leader>rf", function() require('neotest').run.run(vim.fn.expand('%')) end, { desc = "Run tests for current file" })
+keymap.set("n", "<leader>ra", function() require('neotest').run.run(vim.fn.getcwd()) end, { desc = "Run tests for cwd" })
+keymap.set("n", "<leader>rt", function() require('neotest').summary.toggle() end, { desc = "Open neotest summary" })
+keymap.set("n", "<leader>ro", function() require('neotest').output.open() end, { desc = "Open neotest output" })
 -- keymap.set("n", "<leader>rp", function() require('neotest').jump.prev({ status = "failed" }) end, { desc = "Jump to previous test failure" })
 -- keymap.set("n", "<leader>rn", function() require('neotest').jump.next({ status = "failed" }) end, { desc = "Jump to next test failure" })
 
-keymap.set("n", "<leader>rs", function() require("rspec").run_suite() end, { desc = "Run spec suite" })
-keymap.set("n", "<leader>rf", function() require("rspec").run_current_file() end, { desc = "Run spec file" })
-keymap.set("n", "<leader>re", function() require("rspec").run_current_example() end, { desc = "Run spec example" })
-keymap.set("n", "<leader>rd", function() require("rspec").debug() end, { desc = "Debug spec" })
-keymap.set("n", "<leader>rl", function() require("rspec").repeat_last_run() end, { desc = "Repeat spec run" })
+-- keymap.set("n", "<leader>rs", function() require("rspec").run_suite() end, { desc = "Run spec suite" })
+-- keymap.set("n", "<leader>rf", function() require("rspec").run_current_file() end, { desc = "Run spec file" })
+-- keymap.set("n", "<leader>re", function() require("rspec").run_current_example() end, { desc = "Run spec example" })
+-- keymap.set("n", "<leader>rd", function() require("rspec").debug() end, { desc = "Debug spec" })
+-- keymap.set("n", "<leader>rl", function() require("rspec").repeat_last_run() end, { desc = "Repeat spec run" })
 
 -- vim-maximizer
 -- keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
@@ -191,3 +191,6 @@ vim.keymap.set('n', '<leader>ig', function() require('gitportal').open_file_in_n
 -- Agitator
 vim.keymap.set("n", "<leader>gb", function() require('agitator').git_blame_toggle() end)
 
+-- Overseer
+vim.keymap.set("n", "<leader>os", function() require('overseer').toggle() end)
+vim.keymap.set("n", "<leader>or", "<cmd>OverseerRun<cr>")

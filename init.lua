@@ -1,6 +1,6 @@
 require("jacob.settings")
-require("jacob.keymaps")
 require("jacob.plugins")
+require("jacob.keymaps")
 
 vim.cmd("colorscheme oldworld")
 
