@@ -40,6 +40,7 @@ return {
               ["<C-k>"] = lga_actions.quote_prompt(),
               ["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob "}),
               ["<C-s>"] = lga_actions.quote_prompt({ postfix = " --iglob packs/**/*.rb --iglob !**/spec/**"}),
+              ["<C-e>"] = lga_actions.quote_prompt({ postfix = " --iglob packs/**/*.rb --iglob !**/spec/** --iglob !packs/eula_sync"}),
               ["<C-space>"] = actions.to_fuzzy_refine,
             }
           }
