@@ -22,8 +22,15 @@ return {
       },
       pickers = {
         find_files = {
-          theme = "ivy"
+          theme = "ivy",
+          find_command = {'fd', '--type', 'f', '--no-require-git'}
         },
+        grep_string = {
+          additional_args = { '--no-require-git' }
+        },
+        live_grep = {
+          additional_args = { '--no-require-git' }
+        }
       },
       extensions = {
         fzf = {
