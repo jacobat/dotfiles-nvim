@@ -106,6 +106,7 @@ keymap.set("n", "<leader>tsf", function() require('telescope.builtin').find_file
 keymap.set("n", "<leader>tp", function() require('telescope.builtin').find_files({cwd = 'packs'}) end, {})
 -- find word, exluding specs
 keymap.set("n", "<leader>tsw", function() require('telescope.builtin').grep_string({word_match='-w', additional_args={'--glob', '!**spec.rb', '--glob', '!spec', '--glob', '*.rb'}}) end, {})
+keymap.set("n", "<leader>tsy", function() require('telescope.builtin').lsp_document_symbols({symbols = { "function", "method" }}) end, {})
 keymap.set("n", "<leader>tr", function() require('telescope').extensions.recent_files.pick({only_cwd = true}) end, {}) -- find recently opened files
 keymap.set("n", "<leader>tgg", "<cmd>Telescope git_files<cr>") -- find files within current working directory, respects .gitignore
 keymap.set("n", "<leader><leader>", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
