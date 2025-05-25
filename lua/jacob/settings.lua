@@ -49,3 +49,4 @@ vim.api.nvim_create_autocmd('BufWritePre', {
     vim.lsp.buf.format({ async = true })
   end,
 })
+vim.api.nvim_command("au BufWritePost *.ex,*.exs,*.heex lua vim.lsp.buf.format()")

@@ -42,4 +42,5 @@ require("jacob.plugins.lazy").setup({
   require("jacob.plugins.buvvers"),
   require("jacob.plugins.overseer"),
   require("jacob.plugins.copilot"),
+  require("jacob.plugins.elixir-tools"),
 })
