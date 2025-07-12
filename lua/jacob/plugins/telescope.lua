@@ -42,6 +42,7 @@ return {
         },
         live_grep_args = {
           theme = "ivy",
+          additional_args = { '--no-require-git' },
           mappings = {
             i = {
               ["<C-k>"] = lga_actions.quote_prompt(),
