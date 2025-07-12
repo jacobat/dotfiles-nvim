@@ -1,5 +1,24 @@
 local opt = vim.opt -- for conciseness
 
+local function is_wsl()
+  if jit and jit.os == "Linux" then
+    local f = io.open('/proc/version', 'r')
+    if f then
+      local version = f:read('*all')
+      f:close()
+      if version:match('Microsoft') or version:match('WSL') then
+        return true
+      end
+    end
+  end
+  return false
+end
+
+
+
+local uname = vim.loop.os_uname()
+local sysname = uname.sysname
+
 -- line numbers
 opt.relativenumber = false -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
@@ -51,23 +70,26 @@ vim.api.nvim_create_autocmd('BufWritePre', {
 })
 vim.api.nvim_command("au BufWritePost *.ex,*.exs,*.heex lua vim.lsp.buf.format()")
 
-vim.g.clipboard = {
-  name = "WslClipboard",
-  copy = {
-    ["+"] = { "clip.exe" },
-    ["*"] = { "clip.exe" },
-  },
-  paste = {
-    ["+"] = {
-      "/mnt/c/Windows/System32/WindowsPowerShell/v1.0///powershell.exe",
-      "-c",
-      '[Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+
+if is_wsl() then
+  vim.g.clipboard = {
+    name = "WslClipboard",
+    copy = {
+      ["+"] = { "clip.exe" },
+      ["*"] = { "clip.exe" },
     },
-    ["*"] = {
-      "/mnt/c/Windows/System32/WindowsPowerShell/v1.0///powershell.exe",
-      "-c",
-      '[Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+    paste = {
+      ["+"] = {
+        "/mnt/c/Windows/System32/WindowsPowerShell/v1.0///powershell.exe",
+        "-c",
+        '[Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+      },
+      ["*"] = {
+        "/mnt/c/Windows/System32/WindowsPowerShell/v1.0///powershell.exe",
+        "-c",
+        '[Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+      },
     },
-  },
-  cache_enabled = false,
-}
+    cache_enabled = false,
+  }
+end
