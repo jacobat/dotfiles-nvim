@@ -7,7 +7,7 @@ require("jacob.plugins.lazy").setup({
   require("jacob.plugins.vague"),
   require("jacob.plugins.noice"),
 	require("jacob.plugins.lualine"),
-	require("jacob.plugins.telescope"),
+	-- require("jacob.plugins.telescope"),
 	require("jacob.plugins.treesitter"),
 	-- require("jacob.plugins.treesitter-textobjects"),
 	-- require("jacob.plugins.indent-blankline"),
@@ -43,4 +43,5 @@ require("jacob.plugins.lazy").setup({
   require("jacob.plugins.overseer"),
   require("jacob.plugins.copilot"),
   require("jacob.plugins.elixir-tools"),
+  require("jacob.plugins.snacks"),
 })
