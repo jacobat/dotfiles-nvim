@@ -14,7 +14,9 @@ local function is_wsl()
   return false
 end
 
-
+-- set leader key to space
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
 local uname = vim.loop.os_uname()
 local sysname = uname.sysname

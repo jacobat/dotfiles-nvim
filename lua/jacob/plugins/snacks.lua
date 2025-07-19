@@ -21,4 +21,41 @@ return {
     statuscolumn = { enabled = true },
     words = { enabled = true },
   },
+  keys = {
+    {
+      "<leader>tt",
+      function() 
+        Snacks.picker.files(
+          {
+            args = { "--no-require-git" },
+          }
+        )
+      end,
+      desc = "Snacks global files picker"
+    },
+    {
+      "<leader>tsf",
+      function() 
+        Snacks.picker.files(
+          {
+            args = { "--no-require-git" },
+            exclude = { "spec", "test" },
+          }
+        )
+      end,
+      desc = "Snacks files picker excluding specs"
+    },
+    {
+      "<leader>tp",
+      function() 
+        Snacks.picker.files(
+          {
+            args = { "--no-require-git" },
+            dirs = { "packs" },
+          }
+        )
+      end,
+      desc = "Snacks files picker scoped to packs"
+    },
+  },
 }
