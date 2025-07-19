@@ -98,8 +98,8 @@ function find_files_in(subdir)
   require('telescope.builtin').find_files({search_dirs = search_dirs})
 end
 
--- telescope
-keymap.set("n", "<leader>tt", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
+-- find files within current working directory, respects .gitignore--
+keymap.set("n", "<leader>tt", function() Snacks.picker.smart() end, { desc = "Smart Find Files" })
 -- find files, exluding specs
 keymap.set("n", "<leader>tsf", function() require('telescope.builtin').find_files({find_command = {'fd', '--exclude', '**spec.rb', '--exclude', 'spec'}}) end, {})
 -- find files in packs
