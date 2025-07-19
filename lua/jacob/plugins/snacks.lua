@@ -13,7 +13,10 @@ return {
     indent = { enabled = true },
     image = { enabled = true },
     input = { enabled = true },
-    picker = { enabled = true },
+    picker = {
+      enabled = true,
+      layout = "ivy",
+    },
     notifier = { enabled = true },
     quickfile = { enabled = true },
     scope = { enabled = true },
