@@ -23,6 +23,9 @@ return {
     scroll = { enabled = false },
     statuscolumn = { enabled = true },
     words = { enabled = true },
+    layouts = {
+      vertical_wide = { preset = "vertical", layout = { width = 0.9 } }
+    }
   },
   keys = {
     {
@@ -59,6 +62,17 @@ return {
         )
       end,
       desc = "Snacks files picker scoped to packs"
+    },
+    {
+      "<leader>dd",
+      function() 
+        Snacks.picker.diagnostics(
+          {
+            layout = "vertical",
+          }
+        )
+      end,
+      desc = "Snacks diagnostics picker"
     },
   },
 }
