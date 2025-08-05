@@ -122,8 +122,8 @@ keymap.set("n", "<leader>tgs", "<cmd>Telescope live_grep cwd=spec<cr>") -- find 
 keymap.set("n", "<leader>tgl", "<cmd>Telescope live_grep cwd=lib<cr>") -- find string in current working directory as you type
 keymap.set("n", "<leader>tgd", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
 keymap.set("n", "<leader>tw", "<cmd>Telescope grep_string word_match=-w<cr>") -- find string under cursor in current working directory
-keymap.set("n", "<leader>tb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
-keymap.set("n", "<leader>b", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
+-- keymap.set("n", "<leader>tb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
+-- keymap.set("n", "<leader>b", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>th", "<cmd>Telescope help_tags<cr>") -- list available help tags
 keymap.set("n", "<leader>hm", "<cmd>Telescope harpoon marks<cr>") -- list available harpoon marks
 keymap.set("n", "<leader>tss", "<cmd>Telescope session-lens<cr>") -- list open buffers in current neovim instance
