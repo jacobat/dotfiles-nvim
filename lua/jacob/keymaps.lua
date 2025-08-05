@@ -128,8 +128,8 @@ keymap.set("n", "<leader>th", "<cmd>Telescope help_tags<cr>") -- list available 
 keymap.set("n", "<leader>hm", "<cmd>Telescope harpoon marks<cr>") -- list available harpoon marks
 keymap.set("n", "<leader>tss", "<cmd>Telescope session-lens<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>ht", function() require('harpoon.mark').toggle_file() end, {})
-keymap.set("n", "<leader>tlr", function() require('telescope.builtin').lsp_references() end, {})
-keymap.set("n", "<leader>tld", function() require('telescope.builtin').lsp_definitions() end, {})
+-- keymap.set("n", "<leader>tlr", function() require('telescope.builtin').lsp_references() end, {})
+-- keymap.set("n", "<leader>tld", function() require('telescope.builtin').lsp_definitions() end, {})
 keymap.set("n", "<leader>,", function() require('telescope.builtin').current_buffer_tags() end, {})
 keymap.set("n", "<leader>tq", function() require('telescope.builtin').quickfix() end, {})
 keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, {})

@@ -81,5 +81,24 @@
         end,
         desc = "Snacks diagnostics picker"
       },
+      {
+        "<leader>tls",
+        function() 
+          Snacks.picker.lsp_workspace_symbols()
+        end,
+        desc = "Snacks lsp workspace symbols picker"
+      },
+      {
+        "<leader>tlw", function()
+          local symbol = vim.fn.expand("<cword>")
+
+          Snacks.picker.lsp_workspace_symbols()
+
+          vim.defer_fn(function()
+            vim.api.nvim_feedkeys(symbol, "i", false)
+          end, 100) -- 100 ms delay
+        end,
+        desc = "Search workspace symbol under cursor"
+      },
   },
 }
