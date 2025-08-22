@@ -100,5 +100,12 @@ return {
       end,
       desc = "Search workspace symbol under cursor"
     },
+    {
+      "<leader>tw",
+      function()
+        Snacks.picker.grep()
+      end,
+      desc = "Snacks grep picker"
+    },
   },
 }
