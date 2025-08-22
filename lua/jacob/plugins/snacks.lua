@@ -107,5 +107,12 @@ return {
       end,
       desc = "Snacks grep picker"
     },
+    {
+      "<leader>tgw",
+      function()
+        Snacks.picker.grep_word()
+      end,
+      desc = "Snacks grep picker"
+    },
   },
 }
