@@ -16,6 +16,7 @@
   "gitportal.nvim": { "branch": "main", "commit": "6434bef04acf7fcc4f27c7fb1ad1d66286eeab47" },
   "harpoon": { "branch": "master", "commit": "1bc17e3e42ea3c46b33c0bbad6a880792692a1b3" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
+  "lazydev.nvim": { "branch": "main", "commit": "e28ce52fc7ff79fcb76f0e79ee6fb6182fca90b9" },
   "lualine.nvim": { "branch": "master", "commit": "a94fc68960665e54408fe37dcf573193c4ce82c9" },
   "mini.nvim": { "branch": "main", "commit": "5495dd5480843148b0e9ed57b42d32ea47ac2b52" },
   "neogit": { "branch": "master", "commit": "62136c657e9b0723031c56595394f792fd7be0ab" },

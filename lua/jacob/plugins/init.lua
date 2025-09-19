@@ -5,6 +5,7 @@ require("jacob.plugins.lazy").setup({
 	require("jacob.plugins.oxocarbon"),
   require("jacob.plugins.oldworld"),
   require("jacob.plugins.vague"),
+  require("jacob.plugins.neodev"),
   require("jacob.plugins.noice"),
 	require("jacob.plugins.lualine"),
 	-- require("jacob.plugins.telescope"),
