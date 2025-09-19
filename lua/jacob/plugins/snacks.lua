@@ -15,7 +15,12 @@ return {
     input = { enabled = true },
     picker = {
       enabled = true,
-      layout = "ivy",
+      layout = "sidebar",
+      formatters = {
+        file = {
+          filename_first = true
+        }
+      },
     },
     notifier = { enabled = true },
     quickfile = { enabled = true },
@@ -30,7 +35,7 @@ return {
   keys = {
     {
       "<leader>tt",
-      function() 
+      function()
         Snacks.picker.files(
           {
             args = { "--no-require-git" },
@@ -41,7 +46,7 @@ return {
     },
     {
       "<leader>tsf",
-      function() 
+      function()
         Snacks.picker.files(
           {
             args = { "--no-require-git" },
@@ -53,7 +58,7 @@ return {
     },
     {
       "<leader>tp",
-      function() 
+      function()
         Snacks.picker.files(
           {
             args = { "--no-require-git" },
@@ -64,15 +69,27 @@ return {
       desc = "Snacks files picker scoped to packs"
     },
     {
+      "<leader>tfl",
+      function()
+        Snacks.picker.files(
+          {
+            args = { "--no-require-git" },
+            dirs = { "lib" },
+          }
+        )
+      end,
+      desc = "Snacks files picker scoped to lib"
+    },
+    {
       "<leader>tb",
-      function() 
+      function()
         Snacks.picker.buffers()
       end,
       desc = "Snacks buffers picker"
     },
     {
       "<leader>dd",
-      function() 
+      function()
         Snacks.picker.diagnostics(
           {
             layout = "vertical",
@@ -83,7 +100,7 @@ return {
     },
     {
       "<leader>tls",
-      function() 
+      function()
         Snacks.picker.lsp_workspace_symbols()
       end,
       desc = "Snacks lsp workspace symbols picker"
@@ -101,6 +118,16 @@ return {
       desc = "Search workspace symbol under cursor"
     },
     {
+      "<leader>tlo", function()
+        Snacks.picker.lsp_symbols(
+          {
+            layout = "vertical",
+          }
+        )
+      end,
+      desc = "Search buffer symbols"
+    },
+    {
       "<leader>tw",
       function()
         Snacks.picker.grep()
@@ -113,6 +140,84 @@ return {
         Snacks.picker.grep_word()
       end,
       desc = "Snacks grep picker"
+    },
+    {
+      "<leader>tfh",
+      function()
+        if glob_in_cwd("lib/*component.rb") then
+          local component = remove_file_extension(vim.fs.basename(first_file_matching("lib/*component.rb")))
+          Snacks.picker.files(
+            {
+              args = { "--no-require-git" },
+              dirs = { "lib/" .. component .. "/handlers" },
+              title = "Handlers"
+            }
+          )
+        end
+      end,
+      desc = "Snacks eventide handlers picker"
+    },
+    {
+      "<leader>tfm",
+      function()
+        if glob_in_cwd("lib/*component.rb") then
+          local component = remove_file_extension(vim.fs.basename(first_file_matching("lib/*component.rb")))
+          Snacks.picker.files(
+            {
+              args = { "--no-require-git" },
+              dirs = { "lib/" .. component .. "/messages" },
+              title = "Messages"
+            }
+          )
+        end
+      end,
+      desc = "Snacks eventide messages picker"
+    },
+    {
+      "<leader>tfe",
+      function()
+        if glob_in_cwd("lib/*component.rb") then
+          Snacks.picker.files(
+            {
+              args = { "--no-require-git" },
+              dirs = { "exercise" },
+              title = "Messages"
+            }
+          )
+        end
+      end,
+      desc = "Snacks eventide messages picker"
+    },
+    {
+      "<leader>tfc",
+      function()
+        if glob_in_cwd("lib/*component.rb") then
+          local component = first_file_matching("lib/*component.rb")
+          vim.cmd.edit(component)
+        end
+      end,
+      desc = "Snacks eventide messages picker"
+    },
+    {
+      "<leader>tfp",
+      function()
+        if glob_in_cwd("lib/*component.rb") then
+          local component = remove_file_extension(vim.fs.basename(first_file_matching("lib/*component.rb")))
+          vim.cmd.edit("lib/" .. component .. "/projection.rb")
+        end
+      end,
+      desc = "Snacks eventide messages picker"
+    },
+    {
+      "<leader>tft",
+      function()
+        if glob_in_cwd("lib/*component.rb") then
+          local component = remove_file_extension(vim.fs.basename(first_file_matching("lib/*component.rb")))
+          local entity_name = component:gsub("_component", "")
+          vim.cmd.edit("lib/" .. component .. "/" .. entity_name .. ".rb")
+        end
+      end,
+      desc = "Snacks eventide messages picker"
     },
   },
 }
