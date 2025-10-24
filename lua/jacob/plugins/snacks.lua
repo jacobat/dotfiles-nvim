@@ -15,10 +15,11 @@ return {
     input = { enabled = true },
     picker = {
       enabled = true,
-      layout = "sidebar",
+      layout = "ivy_split",
       formatters = {
         file = {
-          filename_first = true
+          truncate = "left",
+          -- filename_first = true
         }
       },
     },
