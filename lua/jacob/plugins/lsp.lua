@@ -2,7 +2,7 @@ return {
   { "neovim/nvim-lspconfig",
     config = function()
       -- require'lspconfig'.solargraph.setup{}
-      require'lspconfig'.ruby_lsp.setup({
+      vim.lsp.config["ruby_lsp"] = {
         init_options = {
           addonSettings = {
             ["Ruby LSP Rails"] = {
@@ -10,8 +10,10 @@ return {
             },
           },
         },
-      })
-      require'lspconfig'.elmls.setup{}
+      }
+      vim.lsp.enable("ruby_lsp");
+
+      vim.lsp.enable("elmls");
 
       vim.lsp.config['luals'] = {
         -- Command and arguments to start the server.
