@@ -15,6 +15,8 @@ return {
 
       vim.lsp.enable("elmls");
 
+      vim.lsp.enable("elixirls");
+
       vim.lsp.config['luals'] = {
         -- Command and arguments to start the server.
         cmd = { 'lua-language-server' },
