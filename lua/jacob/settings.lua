@@ -71,7 +71,7 @@ vim.api.nvim_create_autocmd('BufWritePre', {
     vim.lsp.buf.format({ async = true })
   end,
 })
-vim.api.nvim_command("au BufWritePost *.ex,*.exs,*.heex lua vim.lsp.buf.format()")
+vim.api.nvim_command("au BufWritePre *.ex,*.exs,*.heex lua vim.lsp.buf.format()")
 
 
 if is_wsl() then
