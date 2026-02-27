@@ -45,5 +45,5 @@ require("jacob.plugins.lazy").setup({
   require("jacob.plugins.copilot"),
   require("jacob.plugins.elixir-tools"),
   require("jacob.plugins.snacks"),
-  require("jacob.plugins.pest"),
+  -- require("jacob.plugins.pest"),
 })
