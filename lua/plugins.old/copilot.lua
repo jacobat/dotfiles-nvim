@@ -1,3 +1,4 @@
+-- Chat with GitHub Copilot in Neovim
 return {
   {
     "CopilotC-Nvim/CopilotChat.nvim",

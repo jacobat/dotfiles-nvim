@@ -1,3 +1,4 @@
+-- LSP configs
 local lsps = {
   { "ruby_lsp",
     {
@@ -10,8 +11,9 @@ local lsps = {
       },
     },
   },
-  { "elmls" },
-  { "elixirls" },
+  { "elmls", {} },
+  -- { "elixirls", {} },
+  { "expert", {} },
   { "luals",
     {
       -- Command and arguments to start the server.

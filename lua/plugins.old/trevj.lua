@@ -1,3 +1,4 @@
+-- Nvim-plugin for doing the opposite of join-line (J) of arguments, powered by treesitter
 return {
   'AckslD/nvim-trevJ.lua',
   opts = function()

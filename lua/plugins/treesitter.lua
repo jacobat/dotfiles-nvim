@@ -4,10 +4,12 @@ return {
     'RRethy/nvim-treesitter-endwise',
   },
   build = ':TSUpdate',
-  -- opts = function() 
-  --   require'nvim-treesitter.configs'.setup {
+  opts = function()
+    require('nvim-treesitter').install { 'rust', 'javascript', 'ruby', 'elixir', 'lua', 'heex' }
+
+    -- require'nvim-treesitter.configs'.setup {
   --     -- A list of parser names, or "all" (the five listed parsers should always be installed)
-  --     ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "ruby", "elixir" },
+      -- ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "ruby", "elixir" },
   --
   --     -- Install parsers synchronously (only applied to `ensure_installed`)
   --     sync_install = false,
@@ -131,12 +133,12 @@ return {
   --       },
   --     },
   --
-  --   }
-  -- end,
+    -- }
+-- end,
   -- config = function()
   --   -- Hack to make indentation not break when typing a dot
   --   -- https://github.com/nvim-treesitter/nvim-treesitter/issues/3363
   --   -- https://github.com/tree-sitter/tree-sitter-ruby/issues/230
   --   vim.cmd('autocmd FileType ruby setlocal indentkeys-=.')
-  -- end,
+  end,
 }
