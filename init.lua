@@ -57,3 +57,22 @@ end
 vim.keymap.set('n', "<leader>cpw", function() run_tests() end, {})
 vim.keymap.set('v', "<leader>x", "<cmd>'<,'>lua<CR>", { desc = "Execute visual selection" })
 vim.keymap.set("n", "<leader>x", "<cmd>.lua<CR>", { desc = "Execute the current line" })
+
+-- Autocmd
+local overseer = require("overseer")
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = "*.rs",
+  callback = function()
+    overseer.new_task({
+      cmd = { "cargo" },
+      args = { "test" },
+      cwd = vim.fn.getcwd(),
+      components = {
+        "default",
+        "on_output_quickfix",   -- populate quickfix with errors
+        "on_result_diagnostics",-- LSP-style diagnostics in the file
+      },
+    }):start()
+  end,
+})
