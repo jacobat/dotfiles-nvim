@@ -14,6 +14,8 @@ vim.api.nvim_create_autocmd('FileType', {
   callback = function() vim.treesitter.start() end,
 })
 
+require('nvim-treesitter').install { 'rust', 'javascript', 'ruby', 'elixir', 'lua', 'heex' }
+
 function first_file_matching(pattern)
   local results = vim.fn.glob(vim.loop.cwd() .. "/" .. pattern, true, true)
   if #results > 0 then

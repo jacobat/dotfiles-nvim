@@ -1,11 +1,19 @@
 return {
   'nvim-treesitter/nvim-treesitter',
-  dependencies = {
-    'RRethy/nvim-treesitter-endwise',
-  },
-  build = ':TSUpdate',
-  opts = function()
-    require('nvim-treesitter').install { 'rust', 'javascript', 'ruby', 'elixir', 'lua', 'heex' }
+  branch = "main",
+  lazy = false,
+  build = ':TSUpdate'
+}
+
+
+-- {
+--   'nvim-treesitter/nvim-treesitter',
+--   dependencies = {
+--     'RRethy/nvim-treesitter-endwise',
+--   },
+--   build = ':TSUpdate',
+--   opts = function()
+--     require('nvim-treesitter').install { 'rust', 'javascript', 'ruby', 'elixir', 'lua', 'heex' }
 
     -- require'nvim-treesitter.configs'.setup {
   --     -- A list of parser names, or "all" (the five listed parsers should always be installed)
@@ -140,5 +148,5 @@ return {
   --   -- https://github.com/nvim-treesitter/nvim-treesitter/issues/3363
   --   -- https://github.com/tree-sitter/tree-sitter-ruby/issues/230
   --   vim.cmd('autocmd FileType ruby setlocal indentkeys-=.')
-  end,
-}
+--   end,
+-- }
