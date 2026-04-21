@@ -19,6 +19,11 @@ vim.api.nvim_create_autocmd('FileType', {
   callback = function() vim.treesitter.start() end,
 })
 
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'rust' },
+  callback = function() vim.lsp.inlay_hint.enable(true, nil) end,
+})
+
 require('nvim-treesitter').install { 'rust', 'javascript', 'ruby', 'elixir', 'lua', 'heex', 'python' }
 
 function first_file_matching(pattern)
