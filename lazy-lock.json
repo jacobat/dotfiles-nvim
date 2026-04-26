@@ -21,7 +21,7 @@
   "pest.vim": { "branch": "master", "commit": "60cae7ea1beb644ed40081a3ec213ea9061aba09" },
   "plenary.nvim": { "branch": "master", "commit": "74b06c6c75e4eeb3108ec01852001636d85a932b" },
   "rust.vim": { "branch": "master", "commit": "889b9a7515db477f4cb6808bef1769e53493c578" },
-  "rustaceanvim": { "branch": "main", "commit": "e9c5aaba16fead831379d5f44617547a90b913c7" },
+  "rustaceanvim": { "branch": "master", "commit": "2497c7b2a61d4eb5dad716371a64ea82fb068bee" },
   "snacks.nvim": { "branch": "main", "commit": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e" },
   "vim-abolish": { "branch": "master", "commit": "dcbfe065297d31823561ba787f51056c147aa682" },
   "vim-angry": { "branch": "master", "commit": "08e9e9a50e6683ac7b0c1d6fddfb5f1235c75700" },
