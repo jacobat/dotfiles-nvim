@@ -23,7 +23,7 @@ vim.api.nvim_create_autocmd('FileType', {
 vim.api.nvim_create_autocmd('FileType', {
   pattern = { 'ruby' },
   callback = function()
-    -- vim.lsp.enable("ruby-lsp")
+    vim.lsp.enable("ruby_lsp")
     vim.treesitter.start()
   end,
 })
