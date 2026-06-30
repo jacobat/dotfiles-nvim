@@ -137,6 +137,16 @@ keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list git co
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 
+-- JJ
+keymap.set("n", "<leader>jj", "<cmd>J log<cr>")
+keymap.set("n", "<leader>jl", "<cmd>J log<cr>")
+keymap.set("n", "<leader>jst", "<cmd>J status<cr>")
+keymap.set("n", "<leader>jd", "<cmd>J diff<cr>")
+keymap.set("n", "<leader>jsp", "<cmd>J split<cr>")
+keymap.set("n", "<leader>jc", "<cmd>J commit<cr>")
+keymap.set("n", "<leader>jd", "<cmd>J describe<cr>")
+keymap.set("n", "<leader>jn", "<cmd>J new<cr>")
+
 -- Neogit
 keymap.set("n", "<leader>gn", "<cmd>Neogit<cr>")
 
