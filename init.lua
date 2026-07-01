@@ -5,17 +5,9 @@ require("jacob.keymaps")
 vim.cmd("colorscheme oldworld")
 
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'elixir' },
+  pattern = { 'elixir', 'heex' },
   callback = function()
-    vim.lsp.enable("expert")
-    vim.treesitter.start()
-  end,
-})
-
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'heex' },
-  callback = function()
-    vim.lsp.enable("expert")
+    vim.lsp.enable("elixirls")
     vim.treesitter.start()
   end,
 })
