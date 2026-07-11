@@ -2,7 +2,10 @@ require("jacob.settings")
 require("config.lazy")
 require("jacob.keymaps")
 
-vim.cmd("colorscheme oldworld")
+-- vim.cmd("colorscheme oldworld")
+vim.cmd("colorscheme flume")
+vim.api.nvim_set_hl(0, "@module", { fg = "#f48a94" })
+
 
 vim.api.nvim_create_autocmd('FileType', {
   pattern = { 'elixir', 'heex' },

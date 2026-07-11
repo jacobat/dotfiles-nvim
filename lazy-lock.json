@@ -2,6 +2,7 @@
   "Comment.nvim": { "branch": "master", "commit": "e30b7f2008e52442154b66f7c519bfd2f1e32acb" },
   "auto-session": { "branch": "main", "commit": "6cde3874a9283c2db55627acca5f28e4fa402320" },
   "blink.cmp": { "branch": "main", "commit": "78336bc89ee5365633bcf754d93df01678b5c08f" },
+  "flume.nvim": { "branch": "master", "commit": "437a43ffd3c77dab5862403648277aefbf6366ef" },
   "friendly-snippets": { "branch": "main", "commit": "6cd7280adead7f586db6fccbd15d2cac7e2188b9" },
   "git_expand_tag.nvim": { "branch": "main", "commit": "501d98079734f74b965ad4c06c70d5eae57db0ec" },
   "gitportal.nvim": { "branch": "main", "commit": "0c3e1c1d518c9e42e61e8df35ea0c0582a278a65" },
