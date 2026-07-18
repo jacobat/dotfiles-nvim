@@ -146,6 +146,7 @@ keymap.set("n", "<leader>jsp", "<cmd>J split<cr>")
 keymap.set("n", "<leader>jc", "<cmd>J commit<cr>")
 keymap.set("n", "<leader>jd", "<cmd>J describe<cr>")
 keymap.set("n", "<leader>jn", "<cmd>J new<cr>")
+keymap.set("n", "<leader>df", "<cmd>J diff<cr>")
 
 -- Neogit
 keymap.set("n", "<leader>gn", "<cmd>Neogit<cr>")
