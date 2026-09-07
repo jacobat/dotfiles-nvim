@@ -207,3 +207,6 @@ vim.keymap.set("n", "<leader>gb", function() require('agitator').git_blame_toggl
 vim.keymap.set("n", "<leader>os", function() require('overseer').toggle() end)
 vim.keymap.set("n", "<leader>or", "<cmd>OverseerRun<cr>")
 vim.keymap.set("n", "<leader>oc", "<cmd>OverseerRunCmd<cr>")
+
+-- ExJmp
+vim.keymap.set("n", "<leader>ej", "<cmd>ExJump<cr>", { desc = "Jump to Elixir callback" })
