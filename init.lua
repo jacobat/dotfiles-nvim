@@ -8,7 +8,8 @@ require("jacob.keymaps")
 vim.api.nvim_create_autocmd('FileType', {
   pattern = { 'elixir', 'heex' },
   callback = function()
-    vim.lsp.enable("elixirls")
+    -- vim.lsp.enable("elixirls")
+    vim.lsp.enable("expert")
     vim.treesitter.start()
   end,
 })
