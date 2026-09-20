@@ -210,3 +210,7 @@ vim.keymap.set("n", "<leader>oc", "<cmd>OverseerRunCmd<cr>")
 
 -- ExJmp
 vim.keymap.set("n", "<leader>ej", "<cmd>ExJump<cr>", { desc = "Jump to Elixir callback" })
+
+-- CodeDiff
+vim.keymap.set("n", "<leader>cd", "<cmd>CodeDiff<cr>", { desc = "Open CodeDiff" })
+
